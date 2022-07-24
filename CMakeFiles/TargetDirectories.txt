@@ -1,0 +1,4 @@
+/home/jucilab/sylar/CMakeFiles/rebuild_cache.dir
+/home/jucilab/sylar/CMakeFiles/edit_cache.dir
+/home/jucilab/sylar/CMakeFiles/sylar.dir
+/home/jucilab/sylar/CMakeFiles/test.dir
