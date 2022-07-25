@@ -6,29 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/jucilab/sylar/src/log.cc
-log.h
-/home/jucilab/sylar/src/log.h
-map
--
-iostream
--
-functional
--
+/home/jucilab/sylar/src/util.cc
+util.h
+/home/jucilab/sylar/src/util.h
 
-/home/jucilab/sylar/src/log.h
-string
+/home/jucilab/sylar/src/util.h
+pthread.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/syscall.h
+-
+stdio.h
 -
 stdint.h
--
-memory
--
-list
--
-sstream
--
-fstream
--
-vector
 -
 
