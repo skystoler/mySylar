@@ -1,7 +1,7 @@
 #include "log.h"
 #include<map>
 #include<iostream>
-#include<functional>
+#include <functional>
 #include<time.h>
 #include<string.h>
 
@@ -26,13 +26,31 @@ const char* LogLevel::ToString(LogLevel::Level level){
     return "UNKOWN";
 }
 
-LogEventWrap::LogEventWarp(LogEvent::ptr e)
+LogEventWrap::LogEventWrap(LogEvent::ptr e)
     :m_event(e){
 
 }
-LogEventWrap::~LogEventWarp(){
+LogEventWrap::~LogEventWrap(){
     m_event->getLogger()->log(m_event->getLevel(),m_event);
 }
+
+void LogEvent::format(const char* fmt,...){
+    va_list al;
+    va_start(al,fmt);
+    format(fmt,al);
+    va_end(al);
+}
+
+void LogEvent::format(const char* fmt,va_list al){
+    char* buf=nullptr;
+    int len=vasprintf(&buf,fmt,al);
+    if(len!=-1){
+        m_ss<<std::string(buf,len);
+        free(buf);
+    }
+    
+}
+
 std::stringstream& LogEventWrap::getSS(){
     return m_event->getSS();
 }
@@ -49,7 +67,8 @@ class LevelFormatItem :public LogFormatter::FormatItem{
 public:
     LevelFormatItem(const std::string& str=""){}
     void format(std::ostream& os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override{
-        os<<LogLevel::ToString(level);
+        //os<<LogLevel::ToString(level);
+        os<<LogLevel::ToString(event->getLevel());
     }
 };
 
@@ -65,7 +84,7 @@ class NameFormatItem :public LogFormatter::FormatItem{
 public:
     NameFormatItem(const std::string& str=""){}
     void format(std::ostream& os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override{
-        os<<logger->getName();
+        os<<event->getLogger()->getName();
     }
 };
 
@@ -155,7 +174,7 @@ private:
 
 LogEvent::LogEvent(std::shared_ptr<Logger> logger,LogLevel::Level level
             ,const char* file,int32_t line,uint32_t elapse,uint32_t thread_id
-            ,uint32_t fiber_id,uint32_t time)
+            ,uint32_t fiber_id,uint64_t time)
         :m_file(file),
         m_line(line),
         m_elapse(elapse),
@@ -379,4 +398,29 @@ void LogFormatter::init(){
     }
 }
 
+
+LoggerManager::LoggerManager() {
+    m_root.reset(new Logger);
+    m_root->addAppender(LogAppender::ptr(new StdoutLogAppender));
+
+    m_loggers[m_root->m_name] = m_root;
+
+    init();
+}
+
+Logger::ptr LoggerManager::getLogger(const std::string& name) {
+    auto it = m_loggers.find(name);
+    if(it != m_loggers.end()) {
+        return it->second;
+    }
+
+    Logger::ptr logger(new Logger(name));
+    logger->m_root = m_root;
+    m_loggers[name] = logger;
+    return logger;
+}
+
+void LoggerManager::init(){
+
+}
 }

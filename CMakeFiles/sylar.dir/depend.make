@@ -3,6 +3,8 @@
 
 CMakeFiles/sylar.dir/src/log.cc.o: src/log.cc
 CMakeFiles/sylar.dir/src/log.cc.o: src/log.h
+CMakeFiles/sylar.dir/src/log.cc.o: src/singleton.h
+CMakeFiles/sylar.dir/src/log.cc.o: src/util.h
 
 CMakeFiles/sylar.dir/src/util.cc.o: src/util.cc
 CMakeFiles/sylar.dir/src/util.cc.o: src/util.h

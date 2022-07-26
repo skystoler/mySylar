@@ -13,9 +13,10 @@
 #include"util.h"
 #include"singleton.h"
 
+//使用流式方法将日志级别level的日志写入logger
 #define SYLAR_LOG_LEVEL(logger,level) \
     if(logger->getLevel()<=level) \
-        syalr::LogEventWrap(sylar::LogEvent:;ptr(new sylar::LogEvent(logger,level, \
+        sylar::LogEventWrap(sylar::LogEvent::ptr(new sylar::LogEvent(logger,level, \
                         __FILE__,__LINE__,0,sylar::GetThreadId(), \
                     sylar::GetFiberId(),time(0)))).getSS()
 
@@ -26,9 +27,10 @@
 #define SYLAR_LOG_FATAL(logger) SYLAR_LOG_LEVEL(logger,sylar::LogLevel::FATAL)
 
 
+//使用格式化方法将日志级别level的日志写入logger
 #define SYLAR_LOG_FMT_LEVEL(logger,level,fmt,...) \
     if(logger->getLevel()<=level) \
-        syalr::LogEventWrap(sylar::LogEvent:;ptr(new sylar::LogEvent(logger,level, \
+        sylar::LogEventWrap(sylar::LogEvent::ptr(new sylar::LogEvent(logger,level, \
                         __FILE__,__LINE__,0,sylar::GetThreadId(), \
                     sylar::GetFiberId(),time(0)))).getEvent()->format(fmt,__VA_ARGS__)
 
@@ -38,10 +40,13 @@
 #define SYLAR_LOG_FMT_ERROR(logger,fmt,...) SYLAR_LOG_FMT_LEVEL(logger,sylar::LogLevel::ERROR,fmt,__VA_ARGS__)
 #define SYLAR_LOG_FMT_FATAL(logger,fmt,...) SYLAR_LOG_FMT_LEVEL(logger,sylar::LogLevel::FATAL,fmt,__VA_ARGS__)
 
+//获取主日志器
 #define SYLAR_LOG_ROOT() sylar::LoggerMgr::GetInstance()->getRoot();
+
 namespace sylar{
 
 class Logger;
+class LoggerManager;
 
 //日志级别
 class LogLevel{
@@ -55,6 +60,7 @@ public:
         FATAL=5
     };
 
+    //日志级别转文本
     static const char* ToString(LogLevel::Level level);
 };
 
@@ -64,19 +70,21 @@ public:
     using ptr=std::shared_ptr<LogEvent>; 
     LogEvent(std::shared_ptr<Logger> logger,LogLevel::Level level
             ,const char* file,int32_t line,uint32_t elapse,uint32_t thread_id
-            ,uint32_t fiber_id,uint32_t time);
+            ,uint32_t fiber_id,uint64_t time);
 
     const char* getFile() const{return m_file;}
     int32_t getLine() const{return m_line;}
     uint32_t getElapse() const{return m_elapse;}
     uint32_t getThreadId() const{return m_threadId;}
     uint32_t getFiberId() const{return m_fiberId;}
-    uint32_t getTime() const{return m_time;}
+    uint64_t getTime() const{return m_time;}
     std::string getContent() const{return m_ss.str();}
     std::shared_ptr<Logger> getLogger() const {return m_logger;}
     LogLevel::Level getLevel() const{return m_level;}
 
     std::stringstream& getSS() {return m_ss;}
+    void format(const char* fmt,...);
+    void format(const char* fmt,va_list al);
 private:
     const char* m_file=nullptr; //文件名
     int32_t m_line=0;           //行号
@@ -87,13 +95,15 @@ private:
     std::stringstream m_ss;
 
     std::shared_ptr<Logger> m_logger;
-    LogEvent::Level m_level;
+    LogLevel::Level m_level;
 };
 
-class LogEventWarp{
+class LogEventWrap{
 public:
-    LogEventWarp(LogEvent::ptr e);
-    ~LogEventWarp();
+    LogEventWrap(LogEvent::ptr e);
+    ~LogEventWrap();
+
+    LogEvent::ptr getEvent() const {return m_event;}
     std::stringstream& getSS();
 private:
     LogEvent::ptr m_event;
@@ -132,6 +142,9 @@ public:
 
     void setFormatter(LogFormatter::ptr val){m_formatter=val;}
     LogFormatter::ptr getFormatter() const{return m_formatter;}
+
+    LogLevel::Level getLevel() const{return m_level;}
+    void setLevel(LogLevel::Level level) {m_level=level;}
 protected:
     LogLevel::Level m_level=LogLevel::DEBUG;
     LogFormatter::ptr m_formatter;
@@ -139,6 +152,7 @@ protected:
 
 //日志器
 class Logger :public std::enable_shared_from_this<Logger>{
+friend class LoggerManager;
 public:
     using ptr=std::shared_ptr<Logger>; 
 
@@ -161,7 +175,8 @@ private:
     std::string m_name;                            //日志名称
     LogLevel::Level m_level;                       //日志级别
     std::list<LogAppender::ptr> m_appenders;      //Appender集合
-    LogFormatter::ptr m_formatter;
+    LogFormatter::ptr m_formatter;                  //日志格式器
+    Logger::ptr m_root;                           //主日志器
 };
 
 //输出到控制台
@@ -186,19 +201,19 @@ private:
     std::string m_filename;
 };
 
-class LoggerManger{
+class LoggerManager{
 public:
-    LoggerManger();
+    LoggerManager();
     Logger::ptr getLogger(const std::string& name);
 
     void init();
     Logger::ptr getRoot() const{return m_root;}
 private:
-    std::map<std::string,Logger:ptr> m_loggers;
+    std::map<std::string,Logger::ptr> m_loggers;
     Logger::ptr m_root;
 };
 
-using LoggerMgr=sylar::Singleton;
+using LoggerMgr=sylar::Singleton<LoggerManager>;
 }
 
 #endif

@@ -4,6 +4,8 @@
 CMakeFiles/sylar.dir/src/log.cc.o
  /home/jucilab/sylar/src/log.cc
  /home/jucilab/sylar/src/log.h
+ /home/jucilab/sylar/src/singleton.h
+ /home/jucilab/sylar/src/util.h
 CMakeFiles/sylar.dir/src/util.cc.o
  /home/jucilab/sylar/src/util.cc
  /home/jucilab/sylar/src/util.h
