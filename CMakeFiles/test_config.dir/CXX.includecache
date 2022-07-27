@@ -6,11 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/jucilab/sylar/src/config.cc
-config.h
-/home/jucilab/sylar/src/config.h
+/home/jucilab/sylar/tests/test_config.cc
+src/config.h
+/home/jucilab/sylar/tests/src/config.h
+src/log.h
+/home/jucilab/sylar/tests/src/log.h
+yaml-cpp/yaml.h
+-
+iostream
+-
 
-/home/jucilab/sylar/src/config.h
+src/config.h
 memory
 -
 string
@@ -34,11 +40,11 @@ boost/lexical_cast.hpp
 yaml-cpp/yaml.h
 -
 log.h
-/home/jucilab/sylar/src/log.h
+src/log.h
 util.h
-/home/jucilab/sylar/src/util.h
+src/util.h
 
-/home/jucilab/sylar/src/log.h
+src/log.h
 string
 -
 stdint.h
@@ -58,15 +64,15 @@ stdarg.h
 map
 -
 util.h
-/home/jucilab/sylar/src/util.h
+src/util.h
 singleton.h
-/home/jucilab/sylar/src/singleton.h
+src/singleton.h
 
-/home/jucilab/sylar/src/singleton.h
+src/singleton.h
 memory
 -
 
-/home/jucilab/sylar/src/util.h
+src/util.h
 pthread.h
 -
 unistd.h

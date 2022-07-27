@@ -213,11 +213,17 @@ void Logger::delAppender(LogAppender::ptr appender){
 void Logger::log(LogLevel::Level level, LogEvent::ptr event){
     if(level>=m_level){
         auto self=shared_from_this();
-        for(auto& i:m_appenders){
-            i->log(self,level,event);
+        if(!m_appenders.empty()) {
+            for(auto& i:m_appenders){
+                i->log(self,level,event);
+            }
+            //如果重定向列表为空且主日志器存在，就使用主日志器的默认log
+        }else if(m_root) {
+            m_root->log(level, event);
         }
     }
 }
+
 void Logger::debug(LogEvent::ptr event){
     log(LogLevel::DEBUG,event);
 }

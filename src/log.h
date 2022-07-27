@@ -41,7 +41,9 @@
 #define SYLAR_LOG_FMT_FATAL(logger,fmt,...) SYLAR_LOG_FMT_LEVEL(logger,sylar::LogLevel::FATAL,fmt,__VA_ARGS__)
 
 //获取主日志器
-#define SYLAR_LOG_ROOT() sylar::LoggerMgr::GetInstance()->getRoot();
+#define SYLAR_LOG_ROOT() sylar::LoggerMgr::GetInstance()->getRoot()
+
+#define SYLAR_LOG_NAME(name) sylar::LoggerMgr::GetInstance()->getLogger(name)
 
 namespace sylar{
 

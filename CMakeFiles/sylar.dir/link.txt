@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC  -rdynamic -O0 -g3 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -shared -Wl,-soname,libsylar.so -o lib/libsylar.so CMakeFiles/sylar.dir/src/log.cc.o CMakeFiles/sylar.dir/src/util.cc.o 
+/usr/bin/c++ -fPIC  -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -shared -Wl,-soname,libsylar.so -o lib/libsylar.so CMakeFiles/sylar.dir/src/log.cc.o CMakeFiles/sylar.dir/src/util.cc.o CMakeFiles/sylar.dir/src/config.cc.o  -L/home/jucilab/sylar/lib 
