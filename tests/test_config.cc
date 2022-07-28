@@ -113,7 +113,7 @@ void test_config() {
 
 #endif
 
-/*
+
 class Person {
 public:
     Person() {};
@@ -139,6 +139,7 @@ public:
 
 namespace sylar {
 
+//偏特化
 template<>
 class LexicalCast<std::string, Person> {
 public:
@@ -189,7 +190,7 @@ void test_class() {
         SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) <<  prefix << ": size=" << m.size(); \
     }
 
-    g_person->addListener([](const Person& old_value, const Person& new_value){
+    g_person->addListener(10,[](const Person& old_value, const Person& new_value){
         SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "old_value=" << old_value.toString()
                 << " new_value=" << new_value.toString();
     });
@@ -197,7 +198,7 @@ void test_class() {
     XX_PM(g_person_map, "class.map before");
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
 
-    YAML::Node root = YAML::LoadFile("/home/sylar/workspace/sylar/bin/conf/test.yml");
+    YAML::Node root = YAML::LoadFile("/home/jucilab/sylar/bin/conf/log.yml");
     sylar::Config::LoadFromYaml(root);
 
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "after: " << g_person->getValue().toString() << " - " << g_person->toString();
@@ -205,32 +206,33 @@ void test_class() {
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "after: " << g_person_vec_map->toString();
 }
 
-void test_log() {
-    static sylar::Logger::ptr system_log = SYLAR_LOG_NAME("system");
-    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
-    std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
-    YAML::Node root = YAML::LoadFile("/home/sylar/workspace/sylar/bin/conf/log.yml");
-    sylar::Config::LoadFromYaml(root);
-    std::cout << "=============" << std::endl;
-    std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
-    std::cout << "=============" << std::endl;
-    std::cout << root << std::endl;
-    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
 
-    system_log->setFormatter("%d - %m%n");
-    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
-}
+// void test_log() {
+//     static sylar::Logger::ptr system_log = SYLAR_LOG_NAME("system");
+//     SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+//     std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+//     YAML::Node root = YAML::LoadFile("/home/jucilab/sylar/bin/conf/log.yml");
+//     sylar::Config::LoadFromYaml(root);
+//     std::cout << "=============" << std::endl;
+//     std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+//     std::cout << "=============" << std::endl;
+//     std::cout << root << std::endl;
+//     SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
 
-void test_loadconf() {
-    sylar::Config::LoadFromConfDir("conf");
-} 
+//     system_log->setFormatter("%d - %m%n");
+//     SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+// }
 
-*/
+// void test_loadconf() {
+//     sylar::Config::LoadFromConfDir("conf");
+// } 
+
+
 
 int main(int argc, char** argv) {
-    test_yaml();
-    test_config();
-    //test_class();
+    //test_yaml();
+    //test_config();
+    test_class();
     //test_log();
     // sylar::EnvMgr::GetInstance()->init(argc, argv);
     // test_loadconf();
