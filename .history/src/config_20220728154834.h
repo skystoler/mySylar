@@ -65,14 +65,12 @@ public:
         std::stringstream ss;
         for(size_t i=0;i<node.size();++i){
             ss.str("");
-            ss << node[i];
+            ss<<node[i];
             vec.push_back(LexicalCast<std::string,T>()(ss.str()));
         }
         return vec;
     }
 };
-
-
 
 //for T in vector,T->yaml_node->sstream->string
 template <class T>
@@ -84,11 +82,10 @@ public:
             node.push_back(YAML::Load(LexicalCast<T,std::string>()(i)));
         }
         std::stringstream ss;
-        ss << node;
+        ss<<node;
         return ss.str();
     }
 };
-
 
 //模板的偏特化:list和string互转
 //string->yaml,for yaml_node in yaml,yaml_node->sstream->string->T,push into list
@@ -108,8 +105,6 @@ public:
     }
 };
 
-
-
 //for T in list,T->yaml_node->sstream->string
 template <class T>
 class LexicalCast<std::list<T>,std::string >{
@@ -124,7 +119,6 @@ public:
         return ss.str();
     }
 };
-
 
 //模板的偏特化:set和string互转
 //string->yaml,for yaml_node in yaml,yaml_node->sstream->string->T,push into set
@@ -144,8 +138,6 @@ public:
     }
 };
 
-
-
 //for T in set,T->yaml_node->sstream->string
 template <class T>
 class LexicalCast<std::set<T>,std::string >{
@@ -160,7 +152,6 @@ public:
         return ss.str();
     }
 };
-
 
 //模板的偏特化:unordered_set和string互转
 //string->yaml,for yaml_node in yaml,yaml_node->sstream->string->T,push into unordered_set
@@ -180,8 +171,6 @@ public:
     }
 };
 
-
-
 //for T in unordered_set,T->yaml_node->sstream->string
 template <class T>
 class LexicalCast<std::unordered_set<T>,std::string >{
@@ -196,7 +185,6 @@ public:
         return ss.str();
     }
 };
-
 
 //模板的偏特化:map和string互转
 //string->yaml,for yaml_node in yaml,yaml_node->sstream->string->T,push into map
@@ -217,8 +205,6 @@ public:
     }
 };
 
-
-
 //for T in map,T->yaml_node->sstream->string
 template <class T>
 class LexicalCast<std::map<std::string,T>,std::string >{
@@ -233,7 +219,6 @@ public:
         return ss.str();
     }
 };
-
 
 //模板的偏特化:unordered_map和string互转
 //string->yaml,for yaml_node in yaml,yaml_node->sstream->string->T,push into unordered_map
@@ -254,8 +239,6 @@ public:
     }
 };
 
-
-
 //for T in unordered_map,T->yaml_node->sstream->string
 template <class T>
 class LexicalCast<std::unordered_map<std::string,T>,std::string >{
@@ -266,24 +249,21 @@ public:
             node[i.first]=YAML::Load(LexicalCast<T,std::string>()(i.second));
         }
         std::stringstream ss;
+
         ss<<node;
         return ss.str();
     }
 };
-
-
-
-
-
 
 //该模板具备一般类型和string的相互转化，其他复杂类型及自定义类型依赖偏特化实现
 //FromString T operator()(const std::string&)
 //ToStr std::string operator()(const T&)
 template<class T,class FromStr = LexicalCast<std::string, T>
                 ,class ToStr = LexicalCast<T, std::string> >
-class ConfigVar : public ConfigVarBase{
+class ConfigVar:ConfigVarBase{
 public:
     using ptr=std::shared_ptr<ConfigVar>;
+
     ConfigVar(const std::string& name
             ,const T& default_value
             ,const std::string& description = "")

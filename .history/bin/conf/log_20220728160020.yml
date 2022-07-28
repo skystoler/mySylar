@@ -20,12 +20,8 @@ system:
         -30
     int_list: [20,40,50]
     int_set: [30,20,60,20]
-    int_uset: [30,20,60,20]
+    int_uset: [60,30,20]
     str_int_map: 
       k : 30
       k2 : 20
       k3 : 10
-    str_int_umap: 
-      k : 60
-      k2 : 40
-      k3 : 50

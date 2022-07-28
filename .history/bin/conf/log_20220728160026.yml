@@ -25,7 +25,3 @@ system:
       k : 30
       k2 : 20
       k3 : 10
-    str_int_umap: 
-      k : 60
-      k2 : 40
-      k3 : 50
