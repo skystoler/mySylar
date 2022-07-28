@@ -311,7 +311,9 @@ public:
                 SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) <<"Lookup name:" <<name<< "exists";
                 return tmp;
             }else {
-            
+                SYLAR_LOG_ERROR(SYLAR_LOG_ROOT()) << "Lookup name=" << name << " exists but type not "
+                        << TypeToName<T>() << " real_type=" << it->second->getTypeName()
+                        << " " << it->second->toString();
                 return nullptr;
             }
         }
@@ -323,7 +325,7 @@ public:
         }
 
         typename ConfigVar<T>::ptr v(new ConfigVar<T>(name,default_value,description));
-        GetDatas()[name]=v;
+        //GetDatas()[name]=v;
         return v;
     }
 
