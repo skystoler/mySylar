@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/jucilab/sylar/src/config.cc
-config.h
-/home/jucilab/sylar/src/config.h
-
 /home/jucilab/sylar/src/config.h
 memory
 -
@@ -39,6 +35,22 @@ log.h
 /home/jucilab/sylar/src/log.h
 util.h
 /home/jucilab/sylar/src/util.h
+
+/home/jucilab/sylar/src/log.cc
+map
+-
+iostream
+-
+functional
+-
+time.h
+-
+string.h
+-
+log.h
+/home/jucilab/sylar/src/log.h
+config.h
+/home/jucilab/sylar/src/config.h
 
 /home/jucilab/sylar/src/log.h
 string
