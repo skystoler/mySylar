@@ -13,6 +13,12 @@ CMakeFiles/sylar.dir/src/log.cc.o
  /home/jucilab/sylar/src/log.h
  /home/jucilab/sylar/src/singleton.h
  /home/jucilab/sylar/src/util.h
+CMakeFiles/sylar.dir/src/thread.cc.o
+ /home/jucilab/sylar/src/log.h
+ /home/jucilab/sylar/src/singleton.h
+ /home/jucilab/sylar/src/thread.cc
+ /home/jucilab/sylar/src/thread.h
+ /home/jucilab/sylar/src/util.h
 CMakeFiles/sylar.dir/src/util.cc.o
  /home/jucilab/sylar/src/util.cc
  /home/jucilab/sylar/src/util.h
