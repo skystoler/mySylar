@@ -85,6 +85,10 @@ memory
 -
 pthread.h
 -
+semaphore.h
+-
+stdint.h
+-
 
 src/util.h
 pthread.h

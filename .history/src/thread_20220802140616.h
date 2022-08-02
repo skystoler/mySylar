@@ -30,7 +30,7 @@ private:
 };
 
 //锁
-template <class T>
+temlate <class T>
 struct ScopedLockImpl{
 public:
     ScopedLockImpl(T& mutex)

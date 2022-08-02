@@ -30,7 +30,7 @@ private:
 };
 
 //锁
-template <class T>
+temlate <class T>
 struct ScopedLockImpl{
 public:
     ScopedLockImpl(T& mutex)
@@ -63,7 +63,7 @@ private:
 
 
 //读锁
-template <class T>
+temlate <class T>
 struct ReadScopedLockImpl{
 public:
     ReadScopedLockImpl(T& mutex)
@@ -95,7 +95,7 @@ private:
 };
 
 //写锁
-template <class T>
+temlate <class T>
 struct WriteScopedLockImpl{
 public:
     WriteScopedLockImpl(T& mutex)
@@ -129,8 +129,6 @@ private:
 //读写锁
 class RWMutex{
 public:
-    using ReadLock=ReadScopedLockImpl<RWMutex>;
-    using WriteLock=WriteScopedLockImpl<RWMutex>;
     RWMutex(){
         pthread_rwlock_init(&m_lock,nullptr);
     }
