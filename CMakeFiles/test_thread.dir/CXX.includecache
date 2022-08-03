@@ -47,6 +47,8 @@ log.h
 src/log.h
 util.h
 src/util.h
+thread.h
+src/thread.h
 
 src/log.h
 string
@@ -67,6 +69,8 @@ stdarg.h
 -
 map
 -
+thread.h
+src/thread.h
 util.h
 src/util.h
 singleton.h
@@ -88,6 +92,8 @@ pthread.h
 semaphore.h
 -
 stdint.h
+-
+atomic
 -
 
 src/util.h

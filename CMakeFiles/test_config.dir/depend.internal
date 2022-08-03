@@ -6,4 +6,5 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o
  src/config.h
  src/log.h
  src/singleton.h
+ src/thread.h
  src/util.h

@@ -35,6 +35,8 @@ stdarg.h
 -
 map
 -
+thread.h
+src/thread.h
 util.h
 src/util.h
 singleton.h
@@ -42,6 +44,22 @@ src/singleton.h
 
 src/singleton.h
 memory
+-
+
+src/thread.h
+thread
+-
+functional
+-
+memory
+-
+pthread.h
+-
+semaphore.h
+-
+stdint.h
+-
+atomic
 -
 
 src/util.h

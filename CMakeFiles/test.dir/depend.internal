@@ -5,4 +5,5 @@ CMakeFiles/test.dir/tests/test.cc.o
  /home/jucilab/sylar/tests/test.cc
  src/log.h
  src/singleton.h
+ src/thread.h
  src/util.h

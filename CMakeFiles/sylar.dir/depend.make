@@ -5,12 +5,14 @@ CMakeFiles/sylar.dir/src/config.cc.o: src/config.cc
 CMakeFiles/sylar.dir/src/config.cc.o: src/config.h
 CMakeFiles/sylar.dir/src/config.cc.o: src/log.h
 CMakeFiles/sylar.dir/src/config.cc.o: src/singleton.h
+CMakeFiles/sylar.dir/src/config.cc.o: src/thread.h
 CMakeFiles/sylar.dir/src/config.cc.o: src/util.h
 
 CMakeFiles/sylar.dir/src/log.cc.o: src/config.h
 CMakeFiles/sylar.dir/src/log.cc.o: src/log.cc
 CMakeFiles/sylar.dir/src/log.cc.o: src/log.h
 CMakeFiles/sylar.dir/src/log.cc.o: src/singleton.h
+CMakeFiles/sylar.dir/src/log.cc.o: src/thread.h
 CMakeFiles/sylar.dir/src/log.cc.o: src/util.h
 
 CMakeFiles/sylar.dir/src/thread.cc.o: src/log.h

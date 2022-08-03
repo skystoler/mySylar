@@ -5,5 +5,6 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: tests/test_config.cc
 CMakeFiles/test_config.dir/tests/test_config.cc.o: src/config.h
 CMakeFiles/test_config.dir/tests/test_config.cc.o: src/log.h
 CMakeFiles/test_config.dir/tests/test_config.cc.o: src/singleton.h
+CMakeFiles/test_config.dir/tests/test_config.cc.o: src/thread.h
 CMakeFiles/test_config.dir/tests/test_config.cc.o: src/util.h
 
