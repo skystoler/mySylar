@@ -109,4 +109,8 @@ stdio.h
 -
 stdint.h
 -
+vector
+-
+string
+-
 

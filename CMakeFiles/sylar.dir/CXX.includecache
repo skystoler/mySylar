@@ -88,6 +88,14 @@ singleton.h
 memory
 -
 
+/home/jucilab/sylar/src/thread.cc
+thread.h
+/home/jucilab/sylar/src/thread.h
+log.h
+/home/jucilab/sylar/src/log.h
+util.h
+/home/jucilab/sylar/src/util.h
+
 /home/jucilab/sylar/src/thread.h
 thread
 -
@@ -104,6 +112,14 @@ stdint.h
 atomic
 -
 
+/home/jucilab/sylar/src/util.cc
+util.h
+/home/jucilab/sylar/src/util.h
+log.h
+/home/jucilab/sylar/src/log.h
+execinfo.h
+-
+
 /home/jucilab/sylar/src/util.h
 pthread.h
 -
@@ -116,5 +132,9 @@ sys/syscall.h
 stdio.h
 -
 stdint.h
+-
+vector
+-
+string
 -
 
