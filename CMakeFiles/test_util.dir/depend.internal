@@ -4,6 +4,7 @@
 CMakeFiles/test_util.dir/tests/test_util.cc.o
  /home/jucilab/sylar/tests/test_util.cc
  src/config.h
+ src/fiber.h
  src/log.h
  src/macro.h
  src/singleton.h
