@@ -88,22 +88,12 @@ void Scheduler::stop(){
         tickle();
     }
 
-    if(m_rootFiber){
-        tickle();
+    if(exit_on_this_fiber){
+        
     }
-}
-
-void Scheduler::setThis(){
-    t_scheduler=this;
 }
 
 void Scheduler::run(){
-    setThis();
-    if(sylar::GetThreadId()!=m_rootThread){
-        t_fiber=Fiber::GetThis().get();
-    }
-
-    Fiber::ptr idle_fiber(new Fiber());
 
 }
 }

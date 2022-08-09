@@ -56,9 +56,6 @@ public:
 protected:
     virtual void tickle();
     void run();
-    virtual bool stopping();
-
-    void setThis();
 private:
     template<class FiberOrCb>
     bool scheduleNoLock(FiberOrCb fc,int thread){
@@ -108,7 +105,7 @@ private:
     MutexType m_mutex;
     std::vector<Thread::ptr> m_threads;
     std::list<FiberAndThread> m_fibers;
-    Fiber::ptr m_rootFiber;//创建scheduler的线程的运行scheduler::run的协程
+    Fiber::ptr m_rootFiber;
     std::string m_name;
 protected:
     std::vector<int> m_threadIds;

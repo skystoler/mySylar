@@ -19,7 +19,7 @@ public:
     Scheduler(size_t threads=1,bool use_caller=true,const std::string& name="");
     virtual ~Scheduler();
 
-    const std::string& getName() const{return m_name;}
+    const std:;string& getName() const{return m_name;}
 
     static Scheduler* GetThis();
     static Fiber* GetMainFiber();
@@ -55,10 +55,6 @@ public:
     }
 protected:
     virtual void tickle();
-    void run();
-    virtual bool stopping();
-
-    void setThis();
 private:
     template<class FiberOrCb>
     bool scheduleNoLock(FiberOrCb fc,int thread){
@@ -108,16 +104,14 @@ private:
     MutexType m_mutex;
     std::vector<Thread::ptr> m_threads;
     std::list<FiberAndThread> m_fibers;
-    Fiber::ptr m_rootFiber;//创建scheduler的线程的运行scheduler::run的协程
     std::string m_name;
 protected:
     std::vector<int> m_threadIds;
-    size_t m_threadCount=0;
-    size_t mactiveThreadCount=0;
-    size_t m_idleThreadCount=0;
-    bool m_stopping=true;
-    bool m_autoStop=false;
-    int m_rootThread=0;
+    size_t m_threadCount;
+    size_t mactiveThreadCount;
+    size_t m_idleThreadCount;
+    bool m_stopping;
+    bool m_autoStop;
 };
 
 

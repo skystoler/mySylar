@@ -66,7 +66,7 @@ void Scheduler::start(){
 
 void Scheduler::stop(){
     m_autoStop=true;
-    if(m_rootFiber && m_threadCount==0 && ((m_rootFiber->getState() == Fiber::TERM) 
+    if(m_rootFiber && m_threadCou==0 && ((m_rootFiber->getState() == Fiber::TERM) 
                                     || (m_rootFiber->getState() == Fiber::INIT){
         SYLAR_LOG_INFO(g_logger)<<this<<" stopped";
         m_stopping=true;
@@ -75,35 +75,9 @@ void Scheduler::stop(){
             return();
         }
     }
-
-    bool exit_on_this_fiber = false;
-    if(m_rootThread!=-1){
-        SYLAR_ASSERT(GetThis()==this);
-    }else{
-        SYLAR_ASSERT(GetThis()!=this);
-    }
-
-    m_stopping=true;
-    for(size_t i=0;i<m_threadCount;++i){
-        tickle();
-    }
-
-    if(m_rootFiber){
-        tickle();
-    }
-}
-
-void Scheduler::setThis(){
-    t_scheduler=this;
 }
 
 void Scheduler::run(){
-    setThis();
-    if(sylar::GetThreadId()!=m_rootThread){
-        t_fiber=Fiber::GetThis().get();
-    }
-
-    Fiber::ptr idle_fiber(new Fiber());
 
 }
 }

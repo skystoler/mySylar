@@ -56,9 +56,6 @@ public:
 protected:
     virtual void tickle();
     void run();
-    virtual bool stopping();
-
-    void setThis();
 private:
     template<class FiberOrCb>
     bool scheduleNoLock(FiberOrCb fc,int thread){

@@ -102,8 +102,5 @@ void Scheduler::run(){
     if(sylar::GetThreadId()!=m_rootThread){
         t_fiber=Fiber::GetThis().get();
     }
-
-    Fiber::ptr idle_fiber(new Fiber());
-
 }
 }

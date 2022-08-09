@@ -87,23 +87,9 @@ void Scheduler::stop(){
     for(size_t i=0;i<m_threadCount;++i){
         tickle();
     }
-
-    if(m_rootFiber){
-        tickle();
-    }
-}
-
-void Scheduler::setThis(){
-    t_scheduler=this;
 }
 
 void Scheduler::run(){
-    setThis();
-    if(sylar::GetThreadId()!=m_rootThread){
-        t_fiber=Fiber::GetThis().get();
-    }
-
-    Fiber::ptr idle_fiber(new Fiber());
 
 }
 }
