@@ -6,6 +6,7 @@ CMakeFiles/test_util.dir/tests/test_util.cc.o: src/config.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: src/fiber.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: src/log.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: src/macro.h
+CMakeFiles/test_util.dir/tests/test_util.cc.o: src/scheduler.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: src/singleton.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: src/sylar.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: src/thread.h

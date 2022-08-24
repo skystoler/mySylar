@@ -88,6 +88,20 @@ assert.h
 util.h
 src/util.h
 
+src/scheduler.h
+memory
+-
+vector
+-
+list
+-
+iostream
+-
+fiber.h
+src/fiber.h
+thread.h
+src/thread.h
+
 src/singleton.h
 memory
 -
@@ -101,6 +115,8 @@ log.h
 src/log.h
 macro.h
 src/macro.h
+scheduler.h
+src/scheduler.h
 singleton.h
 src/singleton.h
 thread.h

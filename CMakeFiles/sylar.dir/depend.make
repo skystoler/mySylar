@@ -13,6 +13,7 @@ CMakeFiles/sylar.dir/src/fiber.cc.o: src/fiber.cc
 CMakeFiles/sylar.dir/src/fiber.cc.o: src/fiber.h
 CMakeFiles/sylar.dir/src/fiber.cc.o: src/log.h
 CMakeFiles/sylar.dir/src/fiber.cc.o: src/macro.h
+CMakeFiles/sylar.dir/src/fiber.cc.o: src/scheduler.h
 CMakeFiles/sylar.dir/src/fiber.cc.o: src/singleton.h
 CMakeFiles/sylar.dir/src/fiber.cc.o: src/thread.h
 CMakeFiles/sylar.dir/src/fiber.cc.o: src/util.h
@@ -23,6 +24,15 @@ CMakeFiles/sylar.dir/src/log.cc.o: src/log.h
 CMakeFiles/sylar.dir/src/log.cc.o: src/singleton.h
 CMakeFiles/sylar.dir/src/log.cc.o: src/thread.h
 CMakeFiles/sylar.dir/src/log.cc.o: src/util.h
+
+CMakeFiles/sylar.dir/src/scheduler.cc.o: src/fiber.h
+CMakeFiles/sylar.dir/src/scheduler.cc.o: src/log.h
+CMakeFiles/sylar.dir/src/scheduler.cc.o: src/macro.h
+CMakeFiles/sylar.dir/src/scheduler.cc.o: src/scheduler.cc
+CMakeFiles/sylar.dir/src/scheduler.cc.o: src/scheduler.h
+CMakeFiles/sylar.dir/src/scheduler.cc.o: src/singleton.h
+CMakeFiles/sylar.dir/src/scheduler.cc.o: src/thread.h
+CMakeFiles/sylar.dir/src/scheduler.cc.o: src/util.h
 
 CMakeFiles/sylar.dir/src/thread.cc.o: src/log.h
 CMakeFiles/sylar.dir/src/thread.cc.o: src/singleton.h

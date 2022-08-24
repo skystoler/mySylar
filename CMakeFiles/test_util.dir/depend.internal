@@ -7,6 +7,7 @@ CMakeFiles/test_util.dir/tests/test_util.cc.o
  src/fiber.h
  src/log.h
  src/macro.h
+ src/scheduler.h
  src/singleton.h
  src/sylar.h
  src/thread.h
