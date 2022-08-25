@@ -139,20 +139,12 @@ private:
     Fiber::ptr m_rootFiber;
     std::string m_name;
 protected:
-    //协程下的线程id数组
     std::vector<int> m_threadIds;
-
     size_t m_threadCount=0;
-
-    //工作线程数
     std::atomic<size_t> m_activeThreadCount={0};
-    //空闲线程数
     std::atomic<size_t> m_idleThreadCount={0};
-    //是否正在停止
     bool m_stopping=true;
-    //是否自动停止
     bool m_autoStop=false;
-    //主线程id（use_caller）
     int m_rootThread=0;
 };
 

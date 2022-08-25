@@ -28,7 +28,6 @@ Scheduler::Scheduler(size_t threads,bool use_caller,const std::string& name)
         m_rootThread=sylar::GetThreadId();
         m_threadIds.push_back(m_rootThread);
     }else{
-        //不是use_caller,主线程随意
         m_rootThread=-1;
     }
     m_threadCount=threads;
@@ -95,14 +94,13 @@ void Scheduler::stop(){
         tickle();
     }
 
-    //m_rootfiber=1说明协程调度器使用了当前协程
+    //m_rootfiber=1说明协程调度器使用了当前线程
     if(m_rootFiber){
         tickle();
     }
 
     if(m_rootFiber){
         if(!stopping()){
-            //把当前协程的任务做完
             m_rootFiber->call();
         }
     }
@@ -168,6 +166,7 @@ void Scheduler::run(){
         }
         if(ft.fiber && (ft.fiber->getState() != Fiber::TERM
                         && ft.fiber->getState() != Fiber::EXCEPT)){
+            ++m_activeThreadCount;
             ft.fiber->swapIn();
             --m_activeThreadCount;
             if(ft.fiber->getState() == Fiber::READY){
@@ -185,7 +184,7 @@ void Scheduler::run(){
                 cb_fiber.reset(new Fiber(ft.cb));
             }
             ft.reset();
-        
+            ++m_activeThreadCount;
             cb_fiber->swapIn();
             --m_activeThreadCount;
             if(cb_fiber->getState() == Fiber::READY){
@@ -229,8 +228,6 @@ bool Scheduler::stopping(){
 
 void Scheduler::idle(){
     SYLAR_LOG_INFO(g_logger)<<"idle";
-    while(!stopping()) {
-        sylar::Fiber::YieldToHold();
-    }
+
 }
 }

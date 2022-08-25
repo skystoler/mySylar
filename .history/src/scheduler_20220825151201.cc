@@ -28,7 +28,6 @@ Scheduler::Scheduler(size_t threads,bool use_caller,const std::string& name)
         m_rootThread=sylar::GetThreadId();
         m_threadIds.push_back(m_rootThread);
     }else{
-        //不是use_caller,主线程随意
         m_rootThread=-1;
     }
     m_threadCount=threads;

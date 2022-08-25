@@ -34,7 +34,6 @@ private:
     Fiber();
 public:
     /* 
-    cb 协程执行的函数
     stacksize 协程栈大小
     use_caller 是否在MainFiber上调度
     */
@@ -43,23 +42,17 @@ public:
 
     //重置协程函数，并重置状态（init/terminal）
     void reset(std::function<void()> cb);
-
-    //将当前协程切换到运行状态
+    //切换到当前协程执行
     void swapIn();
-
-    //将当前协程切换到后台
+    //切换到后台执行
     void swapOut();
 
-    //将当前线程切换到运行状态，执行者为当前线程的主协程
     void call();
 
-    //将当前线程切换到后台，执行者为该协程，返回到线程的主协程
     void back();
 
-    //返回协程id
     uint64_t getId() const{return m_id;}
     
-    //返回协程状态
     State getState() const { return m_state;}
 public:
     //设置当前协程
@@ -73,25 +66,18 @@ public:
     //总协程数
     static uint64_t TotalFibers();
 
-    //协程执行函数，执行完成后返回到线程调度协程
     static void MainFunc();
 
     static void CallerMainFunc();
 
-    //static，获取当前协程id
     static uint64_t GetFiberId();
 private:
     uint64_t m_id = 0;
     uint32_t m_stacksize = 0;
     State m_state = INIT;
 
-    //协程上下文
     ucontext_t m_ctx;
-
-    //协程运行栈指针
     void* m_stack = nullptr;
-
-    //协程运行函数
     std::function<void()> m_cb;
 };
 }

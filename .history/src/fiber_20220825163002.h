@@ -78,7 +78,7 @@ public:
 
     static void CallerMainFunc();
 
-    //static，获取当前协程id
+    //获取当前协程id
     static uint64_t GetFiberId();
 private:
     uint64_t m_id = 0;
@@ -90,7 +90,7 @@ private:
 
     //协程运行栈指针
     void* m_stack = nullptr;
-
+    
     //协程运行函数
     std::function<void()> m_cb;
 };

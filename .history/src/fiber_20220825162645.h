@@ -73,25 +73,18 @@ public:
     //总协程数
     static uint64_t TotalFibers();
 
-    //协程执行函数，执行完成后返回到线程调度协程
     static void MainFunc();
 
     static void CallerMainFunc();
 
-    //static，获取当前协程id
     static uint64_t GetFiberId();
 private:
     uint64_t m_id = 0;
     uint32_t m_stacksize = 0;
     State m_state = INIT;
 
-    //协程上下文
     ucontext_t m_ctx;
-
-    //协程运行栈指针
     void* m_stack = nullptr;
-
-    //协程运行函数
     std::function<void()> m_cb;
 };
 }

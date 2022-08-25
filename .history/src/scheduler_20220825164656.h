@@ -152,7 +152,6 @@ protected:
     bool m_stopping=true;
     //是否自动停止
     bool m_autoStop=false;
-    //主线程id（use_caller）
     int m_rootThread=0;
 };
 

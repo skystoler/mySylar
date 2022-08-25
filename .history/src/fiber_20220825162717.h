@@ -78,20 +78,14 @@ public:
 
     static void CallerMainFunc();
 
-    //static，获取当前协程id
     static uint64_t GetFiberId();
 private:
     uint64_t m_id = 0;
     uint32_t m_stacksize = 0;
     State m_state = INIT;
 
-    //协程上下文
     ucontext_t m_ctx;
-
-    //协程运行栈指针
     void* m_stack = nullptr;
-
-    //协程运行函数
     std::function<void()> m_cb;
 };
 }

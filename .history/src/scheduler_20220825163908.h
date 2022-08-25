@@ -34,10 +34,6 @@ public:
     //停止调度器
     void stop();
 
-    /*
-        fc 协程或函数，
-        thread 指定协程执行的线程id，-1标识任意线程
-    */
     template<class FiberOrCb>
     void schedule(FiberOrCb fc,int thread=-1){
         bool need_tickle=false;
@@ -50,7 +46,6 @@ public:
         }
     }
 
-    //批量调度协程
     template<class InputIterator>
     void schedule(InputIterator begin,InputIterator end){
         bool need_tickle=false;
@@ -66,22 +61,13 @@ public:
         }
     }
 protected:
-    //通知协程有任务了
-    virtual void tickle();    
-
-    //协程调度函数
+    virtual void tickle();    //通知有任务来了
     void run();
-
-    //返回是否可以停止
     virtual bool stopping();
-
-    //协程无任务可调度时执行idle协程
     virtual void idle();
 
-    //设置当前协程调度器
     void setThis();
 private:
-    //协程调度启动（无锁）
     template<class FiberOrCb>
     bool scheduleNoLock(FiberOrCb fc,int thread){
         bool need_tickle=m_fibers.empty();
@@ -128,31 +114,17 @@ private:
     };
 private:
     MutexType m_mutex;
-
-    //线程池
     std::vector<Thread::ptr> m_threads;
-
-    //待执行的协程工作队列
     std::list<FiberAndThread> m_fibers;
-
-    //创建scheduler的线程的运行scheduler::run的协程
-    Fiber::ptr m_rootFiber;
+    Fiber::ptr m_rootFiber;//创建scheduler的线程的运行scheduler::run的协程
     std::string m_name;
 protected:
-    //协程下的线程id数组
     std::vector<int> m_threadIds;
-
     size_t m_threadCount=0;
-
-    //工作线程数
     std::atomic<size_t> m_activeThreadCount={0};
-    //空闲线程数
     std::atomic<size_t> m_idleThreadCount={0};
-    //是否正在停止
     bool m_stopping=true;
-    //是否自动停止
     bool m_autoStop=false;
-    //主线程id（use_caller）
     int m_rootThread=0;
 };
 
