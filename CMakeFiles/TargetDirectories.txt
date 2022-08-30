@@ -1,5 +1,6 @@
 /home/jucilab/sylar/CMakeFiles/rebuild_cache.dir
 /home/jucilab/sylar/CMakeFiles/edit_cache.dir
+/home/jucilab/sylar/CMakeFiles/test_iomanager.dir
 /home/jucilab/sylar/CMakeFiles/test_scheduler.dir
 /home/jucilab/sylar/CMakeFiles/test.dir
 /home/jucilab/sylar/CMakeFiles/sylar.dir
