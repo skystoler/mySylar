@@ -27,6 +27,7 @@ CMakeFiles/sylar.dir/src/iomanager.cc.o
  /home/jucilab/sylar/src/scheduler.h
  /home/jucilab/sylar/src/singleton.h
  /home/jucilab/sylar/src/thread.h
+ /home/jucilab/sylar/src/timer.h
  /home/jucilab/sylar/src/util.h
 CMakeFiles/sylar.dir/src/log.cc.o
  /home/jucilab/sylar/src/config.h
@@ -49,6 +50,11 @@ CMakeFiles/sylar.dir/src/thread.cc.o
  /home/jucilab/sylar/src/singleton.h
  /home/jucilab/sylar/src/thread.cc
  /home/jucilab/sylar/src/thread.h
+ /home/jucilab/sylar/src/util.h
+CMakeFiles/sylar.dir/src/timer.cc.o
+ /home/jucilab/sylar/src/thread.h
+ /home/jucilab/sylar/src/timer.cc
+ /home/jucilab/sylar/src/timer.h
  /home/jucilab/sylar/src/util.h
 CMakeFiles/sylar.dir/src/util.cc.o
  /home/jucilab/sylar/src/fiber.h

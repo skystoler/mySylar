@@ -37,6 +37,8 @@ string.h
 /home/jucilab/sylar/src/iomanager.h
 scheduler.h
 /home/jucilab/sylar/src/scheduler.h
+timer.h
+/home/jucilab/sylar/src/timer.h
 
 /home/jucilab/sylar/src/log.h
 string
@@ -105,6 +107,16 @@ stdint.h
 -
 atomic
 -
+
+/home/jucilab/sylar/src/timer.h
+memory
+-
+set
+-
+vector
+-
+thread.h
+/home/jucilab/sylar/src/thread.h
 
 /home/jucilab/sylar/src/util.h
 pthread.h

@@ -379,6 +379,33 @@ src/thread.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/thread.cc.s
 .PHONY : src/thread.cc.s
 
+src/timer.o: src/timer.cc.o
+
+.PHONY : src/timer.o
+
+# target to build an object file
+src/timer.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/timer.cc.o
+.PHONY : src/timer.cc.o
+
+src/timer.i: src/timer.cc.i
+
+.PHONY : src/timer.i
+
+# target to preprocess a source file
+src/timer.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/timer.cc.i
+.PHONY : src/timer.cc.i
+
+src/timer.s: src/timer.cc.s
+
+.PHONY : src/timer.s
+
+# target to generate assembly for a file
+src/timer.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/timer.cc.s
+.PHONY : src/timer.cc.s
+
 src/util.o: src/util.cc.o
 
 .PHONY : src/util.o
@@ -629,6 +656,9 @@ help:
 	@echo "... src/thread.o"
 	@echo "... src/thread.i"
 	@echo "... src/thread.s"
+	@echo "... src/timer.o"
+	@echo "... src/timer.i"
+	@echo "... src/timer.s"
 	@echo "... src/util.o"
 	@echo "... src/util.i"
 	@echo "... src/util.s"

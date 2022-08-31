@@ -12,4 +12,5 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
  src/singleton.h
  src/sylar.h
  src/thread.h
+ src/timer.h
  src/util.h

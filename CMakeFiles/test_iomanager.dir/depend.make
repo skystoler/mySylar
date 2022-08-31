@@ -11,5 +11,6 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: src/scheduler.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: src/singleton.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: src/sylar.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: src/thread.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: src/timer.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: src/util.h
 
