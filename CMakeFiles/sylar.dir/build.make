@@ -99,22 +99,9 @@ CMakeFiles/sylar.dir/src/config.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sylar.dir/src/config.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jucilab/sylar/src/config.cc -o CMakeFiles/sylar.dir/src/config.cc.s
 
-CMakeFiles/sylar.dir/src/scheduler.cc.o: CMakeFiles/sylar.dir/flags.make
-CMakeFiles/sylar.dir/src/scheduler.cc.o: src/scheduler.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sylar.dir/src/scheduler.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sylar.dir/src/scheduler.cc.o -c /home/jucilab/sylar/src/scheduler.cc
-
-CMakeFiles/sylar.dir/src/scheduler.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sylar.dir/src/scheduler.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jucilab/sylar/src/scheduler.cc > CMakeFiles/sylar.dir/src/scheduler.cc.i
-
-CMakeFiles/sylar.dir/src/scheduler.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sylar.dir/src/scheduler.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jucilab/sylar/src/scheduler.cc -o CMakeFiles/sylar.dir/src/scheduler.cc.s
-
 CMakeFiles/sylar.dir/src/thread.cc.o: CMakeFiles/sylar.dir/flags.make
 CMakeFiles/sylar.dir/src/thread.cc.o: src/thread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sylar.dir/src/thread.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sylar.dir/src/thread.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sylar.dir/src/thread.cc.o -c /home/jucilab/sylar/src/thread.cc
 
 CMakeFiles/sylar.dir/src/thread.cc.i: cmake_force
@@ -127,7 +114,7 @@ CMakeFiles/sylar.dir/src/thread.cc.s: cmake_force
 
 CMakeFiles/sylar.dir/src/fiber.cc.o: CMakeFiles/sylar.dir/flags.make
 CMakeFiles/sylar.dir/src/fiber.cc.o: src/fiber.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sylar.dir/src/fiber.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sylar.dir/src/fiber.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sylar.dir/src/fiber.cc.o -c /home/jucilab/sylar/src/fiber.cc
 
 CMakeFiles/sylar.dir/src/fiber.cc.i: cmake_force
@@ -137,6 +124,19 @@ CMakeFiles/sylar.dir/src/fiber.cc.i: cmake_force
 CMakeFiles/sylar.dir/src/fiber.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sylar.dir/src/fiber.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jucilab/sylar/src/fiber.cc -o CMakeFiles/sylar.dir/src/fiber.cc.s
+
+CMakeFiles/sylar.dir/src/scheduler.cc.o: CMakeFiles/sylar.dir/flags.make
+CMakeFiles/sylar.dir/src/scheduler.cc.o: src/scheduler.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sylar.dir/src/scheduler.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sylar.dir/src/scheduler.cc.o -c /home/jucilab/sylar/src/scheduler.cc
+
+CMakeFiles/sylar.dir/src/scheduler.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sylar.dir/src/scheduler.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jucilab/sylar/src/scheduler.cc > CMakeFiles/sylar.dir/src/scheduler.cc.i
+
+CMakeFiles/sylar.dir/src/scheduler.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sylar.dir/src/scheduler.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jucilab/sylar/src/scheduler.cc -o CMakeFiles/sylar.dir/src/scheduler.cc.s
 
 CMakeFiles/sylar.dir/src/iomanager.cc.o: CMakeFiles/sylar.dir/flags.make
 CMakeFiles/sylar.dir/src/iomanager.cc.o: src/iomanager.cc
@@ -169,9 +169,9 @@ sylar_OBJECTS = \
 "CMakeFiles/sylar.dir/src/log.cc.o" \
 "CMakeFiles/sylar.dir/src/util.cc.o" \
 "CMakeFiles/sylar.dir/src/config.cc.o" \
-"CMakeFiles/sylar.dir/src/scheduler.cc.o" \
 "CMakeFiles/sylar.dir/src/thread.cc.o" \
 "CMakeFiles/sylar.dir/src/fiber.cc.o" \
+"CMakeFiles/sylar.dir/src/scheduler.cc.o" \
 "CMakeFiles/sylar.dir/src/iomanager.cc.o" \
 "CMakeFiles/sylar.dir/src/timer.cc.o"
 
@@ -181,9 +181,9 @@ sylar_EXTERNAL_OBJECTS =
 lib/libsylar.so: CMakeFiles/sylar.dir/src/log.cc.o
 lib/libsylar.so: CMakeFiles/sylar.dir/src/util.cc.o
 lib/libsylar.so: CMakeFiles/sylar.dir/src/config.cc.o
-lib/libsylar.so: CMakeFiles/sylar.dir/src/scheduler.cc.o
 lib/libsylar.so: CMakeFiles/sylar.dir/src/thread.cc.o
 lib/libsylar.so: CMakeFiles/sylar.dir/src/fiber.cc.o
+lib/libsylar.so: CMakeFiles/sylar.dir/src/scheduler.cc.o
 lib/libsylar.so: CMakeFiles/sylar.dir/src/iomanager.cc.o
 lib/libsylar.so: CMakeFiles/sylar.dir/src/timer.cc.o
 lib/libsylar.so: CMakeFiles/sylar.dir/build.make
