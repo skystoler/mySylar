@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sylar.dir/src/scheduler.cc.o"
   "CMakeFiles/sylar.dir/src/iomanager.cc.o"
   "CMakeFiles/sylar.dir/src/timer.cc.o"
+  "CMakeFiles/sylar.dir/src/hook.cc.o"
   "lib/libsylar.pdb"
   "lib/libsylar.so"
 )
