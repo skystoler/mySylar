@@ -6,9 +6,9 @@
 #include "macro.h"
 #include <dlfcn.h>
 
-namespace sylar{
-
 sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
+
+namespace sylar{
 
 static thread_local bool t_hook_enable=false;
 
@@ -70,31 +70,31 @@ extern "C"{
     HOOK_FUN(XX);
 #undef XX
 
-struct time_info{
+stuct time_info{
     int cancelled=0;
 }
- 
+
 template <typename OriginFun,tyname ... Args>
 static ssize_t do_io(int fd,OriginFun fun,const char* hook_fun_name,
-    uint32_t event,int timeout_so,Args&&... args){
+    uint32_t event,int timeout_so,ssize_t buflen,Args&&... args){
         if(!sylar::t_hook_enable){
             return fun(fd,std::forward<Args>(args)...); 
         }
 
         sylar::FdCtx::ptr ctx=sylar::FdMgr::GetInstance()->get(fd);
 
-        //如果不是文件描述符
+        //不是文件描述符
         if(!ctx){
             return fun(fd,std::forward<Args>(args)...); 
         }
 
-        //如果文件关闭
+        //文件关闭
         if(ctx->isClose()){
             errno=EBADF;
             return -1;
         }
 
-        //如果不是socket描述符
+        //不是socket描述符
         if(!ctx->isSocket() || ctx->getUserNonBlock()){
             return fun(fd,std::forward<Args>(args)...); 
         }
@@ -102,59 +102,19 @@ static ssize_t do_io(int fd,OriginFun fun,const char* hook_fun_name,
         uint64_t to = ctx->getTimeout(timeout_so);
         std::shared_ptr<timer_info> tinfo(new timer_info);
 
-retry:
         ssize_t n=fd(fd,std::forward<Args>(args)...);
 
-        //中断，重试
+        //重试
         while(n==-1 && errno==EINTR){
             n=fd(fd,std::forward<Args>(args)...);
         }
-        //如果阻塞
+        //阻塞
         if(n==-1 && errno==EAGAIN){
             sylar::IOManager* iom=sylar::IOManager::GetThis();
             sylar::Timer::ptr timer;
-            std::weak_ptr<time_info> winfo(tinfo);
-
-            //to存在，存在超时时间，那么设置条件定时器
-            if(to!=(uint64_t)-1){
-                timer=iomanager->addConditonTimer(to,[winfo,fd,iom,event](){
-                    auto t=winfo.lock();
-                    if(!t || t->cancelled){
-                        return;
-                    }
-                    t->cancelled=ETIMEOUT;
-                    //超时，把事件取消掉
-                    iom->cancelEvent(fd,(sylar::IOManager::Event)(event));
-                },wifo);
-            }
-
-            //添加事件
-            int rt=iom->addEvent(fd,(sylar::IOManager::Event)(event));
-
-            //添加事件失败，取消定时器
-            if(!rt==0){
-                SYLAR_LOG_ERROR(g_logger)<<hook_fun_name<<" addEvent("
-                    <<fd<<", "<<event<<")";
-                if(timer){
-                    timer->cancel();
-                }
-                return -1;
-            }else{
-                //添加成功，让出cpu时间
-                sylar::Fiber::YieldToHold(); 
-                if(timer){
-                    timer->cancel();
-                }
-                if(tindo->cancelled){
-                    errno=tinfo->cancelled;
-                    return -1;
-                }
-
-                goto retry;
-            }
+            std::weak_ptr<time_info> winfo(tinfo);   
         }
 
-        return n;
     }
 
 unsigned int sleep(unsigned int seconds){

@@ -76,7 +76,7 @@ struct time_info{
  
 template <typename OriginFun,tyname ... Args>
 static ssize_t do_io(int fd,OriginFun fun,const char* hook_fun_name,
-    uint32_t event,int timeout_so,Args&&... args){
+    uint32_t event,int timeout_so,ssize_t buflen,Args&&... args){
         if(!sylar::t_hook_enable){
             return fun(fd,std::forward<Args>(args)...); 
         }
@@ -123,15 +123,15 @@ retry:
                         return;
                     }
                     t->cancelled=ETIMEOUT;
-                    //超时，把事件取消掉
                     iom->cancelEvent(fd,(sylar::IOManager::Event)(event));
                 },wifo);
             }
+            // int c=0;
+            // uint64_t now=0;
 
-            //添加事件
-            int rt=iom->addEvent(fd,(sylar::IOManager::Event)(event));
+            int rt=iom->addTimer(fd,(sylar::IOManager::Event)(event));
 
-            //添加事件失败，取消定时器
+            //添加定时器失败，取消定时器
             if(!rt==0){
                 SYLAR_LOG_ERROR(g_logger)<<hook_fun_name<<" addEvent("
                     <<fd<<", "<<event<<")";
@@ -140,7 +140,6 @@ retry:
                 }
                 return -1;
             }else{
-                //添加成功，让出cpu时间
                 sylar::Fiber::YieldToHold(); 
                 if(timer){
                     timer->cancel();
@@ -154,7 +153,6 @@ retry:
             }
         }
 
-        return n;
     }
 
 unsigned int sleep(unsigned int seconds){
