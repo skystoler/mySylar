@@ -18,6 +18,7 @@ set(LIB_SRC
 	src/scheduler.cc
 	src/iomanager.cc
 	src/timer.cc
+	src/fd_manager.cc
 	src/hook.cc
 	)
 

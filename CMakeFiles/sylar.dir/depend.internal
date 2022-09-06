@@ -8,6 +8,12 @@ CMakeFiles/sylar.dir/src/config.cc.o
  /home/jucilab/sylar/src/singleton.h
  /home/jucilab/sylar/src/thread.h
  /home/jucilab/sylar/src/util.h
+CMakeFiles/sylar.dir/src/fd_manager.cc.o
+ /home/jucilab/sylar/src/fd_manager.cc
+ /home/jucilab/sylar/src/fd_manager.h
+ /home/jucilab/sylar/src/hook.h
+ /home/jucilab/sylar/src/singleton.h
+ /home/jucilab/sylar/src/thread.h
 CMakeFiles/sylar.dir/src/fiber.cc.o
  /home/jucilab/sylar/src/config.h
  /home/jucilab/sylar/src/fiber.cc
@@ -20,6 +26,7 @@ CMakeFiles/sylar.dir/src/fiber.cc.o
  /home/jucilab/sylar/src/util.h
 CMakeFiles/sylar.dir/src/hook.cc.o
  /home/jucilab/sylar/src/config.h
+ /home/jucilab/sylar/src/fd_manager.h
  /home/jucilab/sylar/src/fiber.h
  /home/jucilab/sylar/src/hook.cc
  /home/jucilab/sylar/src/hook.h
@@ -50,6 +57,7 @@ CMakeFiles/sylar.dir/src/log.cc.o
  /home/jucilab/sylar/src/thread.h
  /home/jucilab/sylar/src/util.h
 CMakeFiles/sylar.dir/src/scheduler.cc.o
+ /home/jucilab/sylar/src/fd_manager.h
  /home/jucilab/sylar/src/fiber.h
  /home/jucilab/sylar/src/hook.h
  /home/jucilab/sylar/src/log.h

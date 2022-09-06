@@ -38,6 +38,28 @@ util.h
 thread.h
 /home/jucilab/sylar/src/thread.h
 
+/home/jucilab/sylar/src/fd_manager.cc
+fd_manager.h
+/home/jucilab/sylar/src/fd_manager.h
+hook.h
+/home/jucilab/sylar/src/hook.h
+sys/types.h
+-
+sys/stat.h
+-
+unistd.h
+-
+
+/home/jucilab/sylar/src/fd_manager.h
+memory
+-
+vector
+-
+thread.h
+/home/jucilab/sylar/src/thread.h
+singleton.h
+/home/jucilab/sylar/src/singleton.h
+
 /home/jucilab/sylar/src/fiber.h
 memory
 -
@@ -79,6 +101,8 @@ time.h
 -
 unistd.h
 -
+fd_manager.h
+/home/jucilab/sylar/src/fd_manager.h
 
 /home/jucilab/sylar/src/iomanager.h
 scheduler.h

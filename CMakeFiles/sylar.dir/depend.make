@@ -8,6 +8,12 @@ CMakeFiles/sylar.dir/src/config.cc.o: src/singleton.h
 CMakeFiles/sylar.dir/src/config.cc.o: src/thread.h
 CMakeFiles/sylar.dir/src/config.cc.o: src/util.h
 
+CMakeFiles/sylar.dir/src/fd_manager.cc.o: src/fd_manager.cc
+CMakeFiles/sylar.dir/src/fd_manager.cc.o: src/fd_manager.h
+CMakeFiles/sylar.dir/src/fd_manager.cc.o: src/hook.h
+CMakeFiles/sylar.dir/src/fd_manager.cc.o: src/singleton.h
+CMakeFiles/sylar.dir/src/fd_manager.cc.o: src/thread.h
+
 CMakeFiles/sylar.dir/src/fiber.cc.o: src/config.h
 CMakeFiles/sylar.dir/src/fiber.cc.o: src/fiber.cc
 CMakeFiles/sylar.dir/src/fiber.cc.o: src/fiber.h
@@ -19,6 +25,7 @@ CMakeFiles/sylar.dir/src/fiber.cc.o: src/thread.h
 CMakeFiles/sylar.dir/src/fiber.cc.o: src/util.h
 
 CMakeFiles/sylar.dir/src/hook.cc.o: src/config.h
+CMakeFiles/sylar.dir/src/hook.cc.o: src/fd_manager.h
 CMakeFiles/sylar.dir/src/hook.cc.o: src/fiber.h
 CMakeFiles/sylar.dir/src/hook.cc.o: src/hook.cc
 CMakeFiles/sylar.dir/src/hook.cc.o: src/hook.h
@@ -49,6 +56,7 @@ CMakeFiles/sylar.dir/src/log.cc.o: src/singleton.h
 CMakeFiles/sylar.dir/src/log.cc.o: src/thread.h
 CMakeFiles/sylar.dir/src/log.cc.o: src/util.h
 
+CMakeFiles/sylar.dir/src/scheduler.cc.o: src/fd_manager.h
 CMakeFiles/sylar.dir/src/scheduler.cc.o: src/fiber.h
 CMakeFiles/sylar.dir/src/scheduler.cc.o: src/hook.h
 CMakeFiles/sylar.dir/src/scheduler.cc.o: src/log.h
