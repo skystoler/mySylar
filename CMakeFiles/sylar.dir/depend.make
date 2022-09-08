@@ -4,6 +4,10 @@
 CMakeFiles/sylar.dir/src/address.cc.o: src/address.cc
 CMakeFiles/sylar.dir/src/address.cc.o: src/address.h
 CMakeFiles/sylar.dir/src/address.cc.o: src/endian.h
+CMakeFiles/sylar.dir/src/address.cc.o: src/log.h
+CMakeFiles/sylar.dir/src/address.cc.o: src/singleton.h
+CMakeFiles/sylar.dir/src/address.cc.o: src/thread.h
+CMakeFiles/sylar.dir/src/address.cc.o: src/util.h
 
 CMakeFiles/sylar.dir/src/config.cc.o: src/config.cc
 CMakeFiles/sylar.dir/src/config.cc.o: src/config.h
