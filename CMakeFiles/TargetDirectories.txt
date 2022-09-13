@@ -9,4 +9,5 @@
 /home/jucilab/sylar/CMakeFiles/test_config.dir
 /home/jucilab/sylar/CMakeFiles/test_thread.dir
 /home/jucilab/sylar/CMakeFiles/test_util.dir
+/home/jucilab/sylar/CMakeFiles/test_socket.dir
 /home/jucilab/sylar/CMakeFiles/test_fiber.dir

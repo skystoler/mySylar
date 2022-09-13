@@ -75,6 +75,22 @@ CMakeFiles/sylar.dir/src/scheduler.cc.o: src/singleton.h
 CMakeFiles/sylar.dir/src/scheduler.cc.o: src/thread.h
 CMakeFiles/sylar.dir/src/scheduler.cc.o: src/util.h
 
+CMakeFiles/sylar.dir/src/socket.cc.o: src/address.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/fd_manager.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/fiber.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/hook.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/iomanager.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/log.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/macro.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/noncopyable.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/scheduler.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/singleton.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/socket.cc
+CMakeFiles/sylar.dir/src/socket.cc.o: src/socket.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/thread.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/timer.h
+CMakeFiles/sylar.dir/src/socket.cc.o: src/util.h
+
 CMakeFiles/sylar.dir/src/thread.cc.o: src/log.h
 CMakeFiles/sylar.dir/src/thread.cc.o: src/singleton.h
 CMakeFiles/sylar.dir/src/thread.cc.o: src/thread.cc
