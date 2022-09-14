@@ -283,6 +283,33 @@ src/address.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/address.cc.s
 .PHONY : src/address.cc.s
 
+src/bytearray.o: src/bytearray.cc.o
+
+.PHONY : src/bytearray.o
+
+# target to build an object file
+src/bytearray.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/bytearray.cc.o
+.PHONY : src/bytearray.cc.o
+
+src/bytearray.i: src/bytearray.cc.i
+
+.PHONY : src/bytearray.i
+
+# target to preprocess a source file
+src/bytearray.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/bytearray.cc.i
+.PHONY : src/bytearray.cc.i
+
+src/bytearray.s: src/bytearray.cc.s
+
+.PHONY : src/bytearray.s
+
+# target to generate assembly for a file
+src/bytearray.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/bytearray.cc.s
+.PHONY : src/bytearray.cc.s
+
 src/config.o: src/config.cc.o
 
 .PHONY : src/config.o
@@ -872,6 +899,9 @@ help:
 	@echo "... src/address.o"
 	@echo "... src/address.i"
 	@echo "... src/address.s"
+	@echo "... src/bytearray.o"
+	@echo "... src/bytearray.i"
+	@echo "... src/bytearray.s"
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"

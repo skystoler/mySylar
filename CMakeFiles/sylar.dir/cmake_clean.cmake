@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sylar.dir/src/hook.cc.o"
   "CMakeFiles/sylar.dir/src/address.cc.o"
   "CMakeFiles/sylar.dir/src/socket.cc.o"
+  "CMakeFiles/sylar.dir/src/bytearray.cc.o"
   "lib/libsylar.pdb"
   "lib/libsylar.so"
 )
