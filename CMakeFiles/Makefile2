@@ -111,7 +111,7 @@ clean: CMakeFiles/test_address.dir/clean
 CMakeFiles/test_hook.dir/all: CMakeFiles/sylar.dir/all
 	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/depend
 	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=23,24 "Built target test_hook"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=25,26 "Built target test_hook"
 .PHONY : CMakeFiles/test_hook.dir/all
 
 # Include target in all.
@@ -148,7 +148,7 @@ clean: CMakeFiles/test_hook.dir/clean
 CMakeFiles/test_iomanager.dir/all: CMakeFiles/sylar.dir/all
 	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/depend
 	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=25,26 "Built target test_iomanager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=27,28 "Built target test_iomanager"
 .PHONY : CMakeFiles/test_iomanager.dir/all
 
 # Include target in all.
@@ -185,7 +185,7 @@ clean: CMakeFiles/test_iomanager.dir/clean
 CMakeFiles/test_scheduler.dir/all: CMakeFiles/sylar.dir/all
 	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/depend
 	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=27,28 "Built target test_scheduler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=29,30 "Built target test_scheduler"
 .PHONY : CMakeFiles/test_scheduler.dir/all
 
 # Include target in all.
@@ -296,7 +296,7 @@ clean: CMakeFiles/sylar.dir/clean
 CMakeFiles/test_config.dir/all: CMakeFiles/sylar.dir/all
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/depend
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=19,20 "Built target test_config"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=21,22 "Built target test_config"
 .PHONY : CMakeFiles/test_config.dir/all
 
 # Include target in all.
@@ -327,13 +327,50 @@ clean: CMakeFiles/test_config.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/test_bytearray.dir
+
+# All Build rule for target.
+CMakeFiles/test_bytearray.dir/all: CMakeFiles/sylar.dir/all
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/depend
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=19,20 "Built target test_bytearray"
+.PHONY : CMakeFiles/test_bytearray.dir/all
+
+# Include target in all.
+all: CMakeFiles/test_bytearray.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_bytearray.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jucilab/sylar/CMakeFiles 16
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_bytearray.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jucilab/sylar/CMakeFiles 0
+.PHONY : CMakeFiles/test_bytearray.dir/rule
+
+# Convenience name for target.
+test_bytearray: CMakeFiles/test_bytearray.dir/rule
+
+.PHONY : test_bytearray
+
+# clean rule for target.
+CMakeFiles/test_bytearray.dir/clean:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/clean
+.PHONY : CMakeFiles/test_bytearray.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test_bytearray.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test_thread.dir
 
 # All Build rule for target.
 CMakeFiles/test_thread.dir/all: CMakeFiles/sylar.dir/all
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/depend
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=31,32 "Built target test_thread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=33,34 "Built target test_thread"
 .PHONY : CMakeFiles/test_thread.dir/all
 
 # Include target in all.
@@ -370,7 +407,7 @@ clean: CMakeFiles/test_thread.dir/clean
 CMakeFiles/test_util.dir/all: CMakeFiles/sylar.dir/all
 	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/depend
 	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=33,34 "Built target test_util"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=35,36 "Built target test_util"
 .PHONY : CMakeFiles/test_util.dir/all
 
 # Include target in all.
@@ -407,7 +444,7 @@ clean: CMakeFiles/test_util.dir/clean
 CMakeFiles/test_socket.dir/all: CMakeFiles/sylar.dir/all
 	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/depend
 	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=29,30 "Built target test_socket"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=31,32 "Built target test_socket"
 .PHONY : CMakeFiles/test_socket.dir/all
 
 # Include target in all.
@@ -444,7 +481,7 @@ clean: CMakeFiles/test_socket.dir/clean
 CMakeFiles/test_fiber.dir/all: CMakeFiles/sylar.dir/all
 	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/depend
 	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=21,22 "Built target test_fiber"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jucilab/sylar/CMakeFiles --progress-num=23,24 "Built target test_fiber"
 .PHONY : CMakeFiles/test_fiber.dir/all
 
 # Include target in all.

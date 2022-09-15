@@ -13,6 +13,10 @@ CMakeFiles/sylar.dir/src/bytearray.cc.o
  /home/jucilab/sylar/src/bytearray.cc
  /home/jucilab/sylar/src/bytearray.h
  /home/jucilab/sylar/src/endian.h
+ /home/jucilab/sylar/src/log.h
+ /home/jucilab/sylar/src/singleton.h
+ /home/jucilab/sylar/src/thread.h
+ /home/jucilab/sylar/src/util.h
 CMakeFiles/sylar.dir/src/config.cc.o
  /home/jucilab/sylar/src/config.cc
  /home/jucilab/sylar/src/config.h
