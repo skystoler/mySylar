@@ -431,6 +431,33 @@ src/hook.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/hook.cc.s
 .PHONY : src/hook.cc.s
 
+src/http/http.o: src/http/http.cc.o
+
+.PHONY : src/http/http.o
+
+# target to build an object file
+src/http/http.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/http/http.cc.o
+.PHONY : src/http/http.cc.o
+
+src/http/http.i: src/http/http.cc.i
+
+.PHONY : src/http/http.i
+
+# target to preprocess a source file
+src/http/http.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/http/http.cc.i
+.PHONY : src/http/http.cc.i
+
+src/http/http.s: src/http/http.cc.s
+
+.PHONY : src/http/http.s
+
+# target to generate assembly for a file
+src/http/http.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/http/http.cc.s
+.PHONY : src/http/http.cc.s
+
 src/iomanager.o: src/iomanager.cc.o
 
 .PHONY : src/iomanager.o
@@ -955,6 +982,9 @@ help:
 	@echo "... src/hook.o"
 	@echo "... src/hook.i"
 	@echo "... src/hook.s"
+	@echo "... src/http/http.o"
+	@echo "... src/http/http.i"
+	@echo "... src/http/http.s"
 	@echo "... src/iomanager.o"
 	@echo "... src/iomanager.i"
 	@echo "... src/iomanager.s"

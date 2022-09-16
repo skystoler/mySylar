@@ -54,6 +54,9 @@ CMakeFiles/sylar.dir/src/hook.cc.o
  /home/jucilab/sylar/src/thread.h
  /home/jucilab/sylar/src/timer.h
  /home/jucilab/sylar/src/util.h
+CMakeFiles/sylar.dir/src/http/http.cc.o
+ /home/jucilab/sylar/src/http/http.cc
+ /home/jucilab/sylar/src/http/http.h
 CMakeFiles/sylar.dir/src/iomanager.cc.o
  /home/jucilab/sylar/src/fiber.h
  /home/jucilab/sylar/src/iomanager.cc
