@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/jucilab/sylar/src/http/http.cc
-http.h
-/home/jucilab/sylar/src/http/http.h
-
 /home/jucilab/sylar/src/http/http.h
 memory
 -
@@ -23,4 +19,28 @@ sstream
 -
 boost/lexical_cast.hpp
 -
+
+/home/jucilab/sylar/src/http/http11_common.h
+sys/types.h
+-
+
+/home/jucilab/sylar/src/http/http11_parser.h
+http11_common.h
+/home/jucilab/sylar/src/http/http11_common.h
+
+/home/jucilab/sylar/src/http/http_parser.cc
+http_parser.h
+/home/jucilab/sylar/src/http/http_parser.h
+
+/home/jucilab/sylar/src/http/http_parser.h
+http.h
+/home/jucilab/sylar/src/http/http.h
+http11_parser.h
+/home/jucilab/sylar/src/http/http11_parser.h
+httpclient_parser.h
+/home/jucilab/sylar/src/http/httpclient_parser.h
+
+/home/jucilab/sylar/src/http/httpclient_parser.h
+http11_common.h
+/home/jucilab/sylar/src/http/http11_common.h
 

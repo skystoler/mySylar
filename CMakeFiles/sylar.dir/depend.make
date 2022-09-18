@@ -57,6 +57,21 @@ CMakeFiles/sylar.dir/src/hook.cc.o: src/util.h
 CMakeFiles/sylar.dir/src/http/http.cc.o: src/http/http.cc
 CMakeFiles/sylar.dir/src/http/http.cc.o: src/http/http.h
 
+CMakeFiles/sylar.dir/src/http/http11_parser.rl.cc.o: src/http/http11_common.h
+CMakeFiles/sylar.dir/src/http/http11_parser.rl.cc.o: src/http/http11_parser.h
+CMakeFiles/sylar.dir/src/http/http11_parser.rl.cc.o: src/http/http11_parser.rl.cc
+
+CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/http/http.h
+CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/http/http11_common.h
+CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/http/http11_parser.h
+CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/http/http_parser.cc
+CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/http/http_parser.h
+CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/http/httpclient_parser.h
+
+CMakeFiles/sylar.dir/src/http/httpclient_parser.rl.cc.o: src/http/http11_common.h
+CMakeFiles/sylar.dir/src/http/httpclient_parser.rl.cc.o: src/http/httpclient_parser.h
+CMakeFiles/sylar.dir/src/http/httpclient_parser.rl.cc.o: src/http/httpclient_parser.rl.cc
+
 CMakeFiles/sylar.dir/src/iomanager.cc.o: src/fiber.h
 CMakeFiles/sylar.dir/src/iomanager.cc.o: src/iomanager.cc
 CMakeFiles/sylar.dir/src/iomanager.cc.o: src/iomanager.h
