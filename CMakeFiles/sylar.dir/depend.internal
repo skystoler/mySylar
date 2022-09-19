@@ -68,6 +68,11 @@ CMakeFiles/sylar.dir/src/http/http_parser.cc.o
  /home/jucilab/sylar/src/http/http_parser.cc
  /home/jucilab/sylar/src/http/http_parser.h
  /home/jucilab/sylar/src/http/httpclient_parser.h
+ src/config.h
+ src/log.h
+ src/singleton.h
+ src/thread.h
+ src/util.h
 CMakeFiles/sylar.dir/src/http/httpclient_parser.rl.cc.o
  /home/jucilab/sylar/src/http/http11_common.h
  /home/jucilab/sylar/src/http/httpclient_parser.h

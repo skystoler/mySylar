@@ -67,6 +67,11 @@ CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/http/http11_parser.h
 CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/http/http_parser.cc
 CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/http/http_parser.h
 CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/http/httpclient_parser.h
+CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/config.h
+CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/log.h
+CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/singleton.h
+CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/thread.h
+CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/util.h
 
 CMakeFiles/sylar.dir/src/http/httpclient_parser.rl.cc.o: src/http/http11_common.h
 CMakeFiles/sylar.dir/src/http/httpclient_parser.rl.cc.o: src/http/httpclient_parser.h
