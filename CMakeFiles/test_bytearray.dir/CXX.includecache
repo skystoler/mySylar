@@ -21,6 +21,10 @@ stdint.h
 -
 endian.h
 src/endian.h
+vector
+-
+sys/uio.h
+-
 
 src/config.h
 memory

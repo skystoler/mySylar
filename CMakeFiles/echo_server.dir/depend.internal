@@ -4,6 +4,8 @@
 CMakeFiles/echo_server.dir/example/echo_server.cc.o
  /home/jucilab/sylar/example/echo_server.cc
  src/address.h
+ src/bytearray.h
+ src/endian.h
  src/fiber.h
  src/iomanager.h
  src/log.h

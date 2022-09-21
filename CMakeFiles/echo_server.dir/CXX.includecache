@@ -13,6 +13,8 @@ src/log.h
 /home/jucilab/sylar/example/src/log.h
 src/iomanager.h
 /home/jucilab/sylar/example/src/iomanager.h
+src/bytearray.h
+/home/jucilab/sylar/example/src/bytearray.h
 
 src/address.h
 memory
@@ -34,6 +36,26 @@ unistd.h
 vector
 -
 map
+-
+
+src/bytearray.h
+memory
+-
+string
+-
+stdint.h
+-
+endian.h
+src/endian.h
+vector
+-
+sys/uio.h
+-
+
+src/endian.h
+byteswap.h
+-
+stdint.h
 -
 
 src/fiber.h

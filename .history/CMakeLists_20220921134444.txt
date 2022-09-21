@@ -1,0 +1,108 @@
+cmake_minimum_required(VERSION 2.8)
+project(sylar)
+
+set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function")
+
+include_directories(.)
+include_directories(/home/jucilab/sylar)
+
+link_directories(/home/jucilab/sylar/lib)
+
+set(LIB_SRC
+	src/log.cc
+	src/util.cc
+	src/config.cc
+	src/thread.cc
+	src/fiber.cc
+	src/scheduler.cc
+	src/iomanager.cc
+	src/timer.cc
+	src/fd_manager.cc
+	src/hook.cc
+	src/address.cc
+	src/socket.cc
+	src/bytearray.cc
+	src/http/http.cc
+	src/http/http11_parser.rl.cc
+	src/http/httpclient_parser.rl.cc
+	src/http/http_parser.cc
+	src/tcp_server.cc
+	src/stream.cc
+	)
+
+add_library(sylar SHARED ${LIB_SRC})
+
+set(LIB_LIB
+	sylar
+	pthread
+	yaml-cpp
+	dl
+	)
+	
+
+add_executable(test tests/test.cc)
+add_dependencies(test sylar)
+target_link_libraries(test ${LIB_LIB})
+
+
+add_executable(test_config tests/test_config.cc)
+add_dependencies(test_config sylar) 
+target_link_libraries(test_config ${LIB_LIB})
+
+add_executable(test_thread tests/test_thread.cc)
+add_dependencies(test_thread sylar) 
+target_link_libraries(test_thread ${LIB_LIB})
+
+add_executable(test_util tests/test_util.cc)
+add_dependencies(test_util sylar) 
+target_link_libraries(test_util ${LIB_LIB})
+
+add_executable(test_fiber tests/test_fiber.cc)
+add_dependencies(test_fiber sylar) 
+target_link_libraries(test_fiber ${LIB_LIB})
+
+add_executable(test_scheduler tests/test_scheduler.cc)
+add_dependencies(test_scheduler sylar) 
+target_link_libraries(test_scheduler ${LIB_LIB})
+
+add_executable(test_iomanager tests/test_iomanager.cc)
+add_dependencies(test_iomanager sylar) 
+target_link_libraries(test_iomanager ${LIB_LIB})
+
+add_executable(test_hook tests/test_hook.cc)
+add_dependencies(test_hook sylar) 
+target_link_libraries(test_hook ${LIB_LIB})
+
+add_executable(test_address tests/test_address.cc)
+add_dependencies(test_address sylar) 
+target_link_libraries(test_address ${LIB_LIB})
+
+add_executable(test_socket tests/test_socket.cc)
+add_dependencies(test_socket sylar) 
+target_link_libraries(test_socket ${LIB_LIB})
+
+add_executable(test_bytearray tests/test_bytearray.cc)
+add_dependencies(test_bytearray sylar) 
+target_link_libraries(test_bytearray ${LIB_LIB})
+
+add_executable(test_http tests/test_http.cc)
+add_dependencies(test_http sylar) 
+target_link_libraries(test_http ${LIB_LIB})
+
+
+add_executable(test_http_parser tests/test_http_parser.cc)
+add_dependencies(test_http_parser  sylar) 
+target_link_libraries(test_http_parser  ${LIB_LIB})
+
+add_executable(test_tcp_server tests/test_tcp_server.cc)
+add_dependencies(test_tcp_server  sylar) 
+target_link_libraries(test_tcp_server  ${LIB_LIB})
+
+add_executable(echo_server example/echo_server.cc)
+add_dependencies(echo_server  sylar) 
+target_link_libraries(echo_server  ${LIB_LIB})
+
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+

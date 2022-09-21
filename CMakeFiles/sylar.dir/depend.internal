@@ -122,6 +122,20 @@ CMakeFiles/sylar.dir/src/socket.cc.o
  /home/jucilab/sylar/src/thread.h
  /home/jucilab/sylar/src/timer.h
  /home/jucilab/sylar/src/util.h
+CMakeFiles/sylar.dir/src/stream.cc.o
+ /home/jucilab/sylar/src/bytearray.h
+ /home/jucilab/sylar/src/endian.h
+ /home/jucilab/sylar/src/stream.cc
+ /home/jucilab/sylar/src/stream.h
+CMakeFiles/sylar.dir/src/streams/socket_stream.cc.o
+ /home/jucilab/sylar/src/streams/socket_stream.cc
+ /home/jucilab/sylar/src/streams/socket_stream.h
+ src/address.h
+ src/bytearray.h
+ src/endian.h
+ src/noncopyable.h
+ src/socket.h
+ src/stream.h
 CMakeFiles/sylar.dir/src/tcp_server.cc.o
  /home/jucilab/sylar/src/address.h
  /home/jucilab/sylar/src/config.h

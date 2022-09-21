@@ -122,6 +122,20 @@ CMakeFiles/sylar.dir/src/socket.cc.o: src/thread.h
 CMakeFiles/sylar.dir/src/socket.cc.o: src/timer.h
 CMakeFiles/sylar.dir/src/socket.cc.o: src/util.h
 
+CMakeFiles/sylar.dir/src/stream.cc.o: src/bytearray.h
+CMakeFiles/sylar.dir/src/stream.cc.o: src/endian.h
+CMakeFiles/sylar.dir/src/stream.cc.o: src/stream.cc
+CMakeFiles/sylar.dir/src/stream.cc.o: src/stream.h
+
+CMakeFiles/sylar.dir/src/streams/socket_stream.cc.o: src/streams/socket_stream.cc
+CMakeFiles/sylar.dir/src/streams/socket_stream.cc.o: src/streams/socket_stream.h
+CMakeFiles/sylar.dir/src/streams/socket_stream.cc.o: src/address.h
+CMakeFiles/sylar.dir/src/streams/socket_stream.cc.o: src/bytearray.h
+CMakeFiles/sylar.dir/src/streams/socket_stream.cc.o: src/endian.h
+CMakeFiles/sylar.dir/src/streams/socket_stream.cc.o: src/noncopyable.h
+CMakeFiles/sylar.dir/src/streams/socket_stream.cc.o: src/socket.h
+CMakeFiles/sylar.dir/src/streams/socket_stream.cc.o: src/stream.h
+
 CMakeFiles/sylar.dir/src/tcp_server.cc.o: src/address.h
 CMakeFiles/sylar.dir/src/tcp_server.cc.o: src/config.h
 CMakeFiles/sylar.dir/src/tcp_server.cc.o: src/fiber.h

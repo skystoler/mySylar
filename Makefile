@@ -726,6 +726,60 @@ src/socket.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/socket.cc.s
 .PHONY : src/socket.cc.s
 
+src/stream.o: src/stream.cc.o
+
+.PHONY : src/stream.o
+
+# target to build an object file
+src/stream.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/stream.cc.o
+.PHONY : src/stream.cc.o
+
+src/stream.i: src/stream.cc.i
+
+.PHONY : src/stream.i
+
+# target to preprocess a source file
+src/stream.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/stream.cc.i
+.PHONY : src/stream.cc.i
+
+src/stream.s: src/stream.cc.s
+
+.PHONY : src/stream.s
+
+# target to generate assembly for a file
+src/stream.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/stream.cc.s
+.PHONY : src/stream.cc.s
+
+src/streams/socket_stream.o: src/streams/socket_stream.cc.o
+
+.PHONY : src/streams/socket_stream.o
+
+# target to build an object file
+src/streams/socket_stream.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/streams/socket_stream.cc.o
+.PHONY : src/streams/socket_stream.cc.o
+
+src/streams/socket_stream.i: src/streams/socket_stream.cc.i
+
+.PHONY : src/streams/socket_stream.i
+
+# target to preprocess a source file
+src/streams/socket_stream.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/streams/socket_stream.cc.i
+.PHONY : src/streams/socket_stream.cc.i
+
+src/streams/socket_stream.s: src/streams/socket_stream.cc.s
+
+.PHONY : src/streams/socket_stream.s
+
+# target to generate assembly for a file
+src/streams/socket_stream.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/streams/socket_stream.cc.s
+.PHONY : src/streams/socket_stream.cc.s
+
 src/tcp_server.o: src/tcp_server.cc.o
 
 .PHONY : src/tcp_server.o
@@ -1281,6 +1335,12 @@ help:
 	@echo "... src/socket.o"
 	@echo "... src/socket.i"
 	@echo "... src/socket.s"
+	@echo "... src/stream.o"
+	@echo "... src/stream.i"
+	@echo "... src/stream.s"
+	@echo "... src/streams/socket_stream.o"
+	@echo "... src/streams/socket_stream.i"
+	@echo "... src/streams/socket_stream.s"
 	@echo "... src/tcp_server.o"
 	@echo "... src/tcp_server.i"
 	@echo "... src/tcp_server.s"

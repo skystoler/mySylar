@@ -3,6 +3,8 @@
 
 CMakeFiles/echo_server.dir/example/echo_server.cc.o: example/echo_server.cc
 CMakeFiles/echo_server.dir/example/echo_server.cc.o: src/address.h
+CMakeFiles/echo_server.dir/example/echo_server.cc.o: src/bytearray.h
+CMakeFiles/echo_server.dir/example/echo_server.cc.o: src/endian.h
 CMakeFiles/echo_server.dir/example/echo_server.cc.o: src/fiber.h
 CMakeFiles/echo_server.dir/example/echo_server.cc.o: src/iomanager.h
 CMakeFiles/echo_server.dir/example/echo_server.cc.o: src/log.h
