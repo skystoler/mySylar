@@ -1,4 +1,5 @@
 /home/jucilab/sylar/CMakeFiles/rebuild_cache.dir
+/home/jucilab/sylar/CMakeFiles/test_http_server.dir
 /home/jucilab/sylar/CMakeFiles/test_socket.dir
 /home/jucilab/sylar/CMakeFiles/edit_cache.dir
 /home/jucilab/sylar/CMakeFiles/test_util.dir
