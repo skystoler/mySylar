@@ -76,6 +76,7 @@ CMakeFiles/sylar.dir/src/http/http_parser.cc.o: src/util.h
 CMakeFiles/sylar.dir/src/http/http_server.cc.o: src/http/http.h
 CMakeFiles/sylar.dir/src/http/http_server.cc.o: src/http/http_server.cc
 CMakeFiles/sylar.dir/src/http/http_server.cc.o: src/http/http_server.h
+CMakeFiles/sylar.dir/src/http/http_server.cc.o: src/http/http_servlet.h
 CMakeFiles/sylar.dir/src/http/http_server.cc.o: src/http/http_session.h
 CMakeFiles/sylar.dir/src/http/http_server.cc.o: src/address.h
 CMakeFiles/sylar.dir/src/http/http_server.cc.o: src/bytearray.h
@@ -93,6 +94,19 @@ CMakeFiles/sylar.dir/src/http/http_server.cc.o: src/tcp_server.h
 CMakeFiles/sylar.dir/src/http/http_server.cc.o: src/thread.h
 CMakeFiles/sylar.dir/src/http/http_server.cc.o: src/timer.h
 CMakeFiles/sylar.dir/src/http/http_server.cc.o: src/util.h
+
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/http/http.h
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/http/http_servlet.cc
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/http/http_servlet.h
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/http/http_session.h
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/address.h
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/bytearray.h
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/endian.h
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/noncopyable.h
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/socket.h
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/stream.h
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/streams/socket_stream.h
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o: src/thread.h
 
 CMakeFiles/sylar.dir/src/http/http_session.cc.o: src/http/http.h
 CMakeFiles/sylar.dir/src/http/http_session.cc.o: src/http/http11_common.h
@@ -131,7 +145,6 @@ CMakeFiles/sylar.dir/src/log.cc.o: src/singleton.h
 CMakeFiles/sylar.dir/src/log.cc.o: src/thread.h
 CMakeFiles/sylar.dir/src/log.cc.o: src/util.h
 
-CMakeFiles/sylar.dir/src/scheduler.cc.o: src/fd_manager.h
 CMakeFiles/sylar.dir/src/scheduler.cc.o: src/fiber.h
 CMakeFiles/sylar.dir/src/scheduler.cc.o: src/hook.h
 CMakeFiles/sylar.dir/src/scheduler.cc.o: src/log.h

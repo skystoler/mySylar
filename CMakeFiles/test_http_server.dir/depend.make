@@ -8,6 +8,7 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: src/endian.h
 CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: src/fiber.h
 CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: src/http/http.h
 CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: src/http/http_server.h
+CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: src/http/http_servlet.h
 CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: src/http/http_session.h
 CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: src/iomanager.h
 CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: src/log.h

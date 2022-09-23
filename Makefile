@@ -631,6 +631,33 @@ src/http/http_server.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/http/http_server.cc.s
 .PHONY : src/http/http_server.cc.s
 
+src/http/http_servlet.o: src/http/http_servlet.cc.o
+
+.PHONY : src/http/http_servlet.o
+
+# target to build an object file
+src/http/http_servlet.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/http/http_servlet.cc.o
+.PHONY : src/http/http_servlet.cc.o
+
+src/http/http_servlet.i: src/http/http_servlet.cc.i
+
+.PHONY : src/http/http_servlet.i
+
+# target to preprocess a source file
+src/http/http_servlet.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/http/http_servlet.cc.i
+.PHONY : src/http/http_servlet.cc.i
+
+src/http/http_servlet.s: src/http/http_servlet.cc.s
+
+.PHONY : src/http/http_servlet.s
+
+# target to generate assembly for a file
+src/http/http_servlet.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/http/http_servlet.cc.s
+.PHONY : src/http/http_servlet.cc.s
+
 src/http/http_session.o: src/http/http_session.cc.o
 
 .PHONY : src/http/http_session.o
@@ -1418,6 +1445,9 @@ help:
 	@echo "... src/http/http_server.o"
 	@echo "... src/http/http_server.i"
 	@echo "... src/http/http_server.s"
+	@echo "... src/http/http_servlet.o"
+	@echo "... src/http/http_servlet.i"
+	@echo "... src/http/http_servlet.s"
 	@echo "... src/http/http_session.o"
 	@echo "... src/http/http_session.i"
 	@echo "... src/http/http_session.s"

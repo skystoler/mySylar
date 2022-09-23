@@ -77,6 +77,7 @@ CMakeFiles/sylar.dir/src/http/http_server.cc.o
  /home/jucilab/sylar/src/http/http.h
  /home/jucilab/sylar/src/http/http_server.cc
  /home/jucilab/sylar/src/http/http_server.h
+ /home/jucilab/sylar/src/http/http_servlet.h
  /home/jucilab/sylar/src/http/http_session.h
  src/address.h
  src/bytearray.h
@@ -94,6 +95,19 @@ CMakeFiles/sylar.dir/src/http/http_server.cc.o
  src/thread.h
  src/timer.h
  src/util.h
+CMakeFiles/sylar.dir/src/http/http_servlet.cc.o
+ /home/jucilab/sylar/src/http/http.h
+ /home/jucilab/sylar/src/http/http_servlet.cc
+ /home/jucilab/sylar/src/http/http_servlet.h
+ /home/jucilab/sylar/src/http/http_session.h
+ src/address.h
+ src/bytearray.h
+ src/endian.h
+ src/noncopyable.h
+ src/socket.h
+ src/stream.h
+ src/streams/socket_stream.h
+ src/thread.h
 CMakeFiles/sylar.dir/src/http/http_session.cc.o
  /home/jucilab/sylar/src/http/http.h
  /home/jucilab/sylar/src/http/http11_common.h
@@ -132,7 +146,6 @@ CMakeFiles/sylar.dir/src/log.cc.o
  /home/jucilab/sylar/src/thread.h
  /home/jucilab/sylar/src/util.h
 CMakeFiles/sylar.dir/src/scheduler.cc.o
- /home/jucilab/sylar/src/fd_manager.h
  /home/jucilab/sylar/src/fiber.h
  /home/jucilab/sylar/src/hook.h
  /home/jucilab/sylar/src/log.h

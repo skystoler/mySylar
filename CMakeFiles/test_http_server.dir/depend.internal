@@ -9,6 +9,7 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o
  src/fiber.h
  src/http/http.h
  src/http/http_server.h
+ src/http/http_servlet.h
  src/http/http_session.h
  src/iomanager.h
  src/log.h
