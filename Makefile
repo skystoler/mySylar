@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_http_connection
+
+# Build rule for target.
+test_http_connection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_connection
+.PHONY : test_http_connection
+
+# fast build rule for target.
+test_http_connection/fast:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/build
+.PHONY : test_http_connection/fast
+
+#=============================================================================
 # Target rules for targets named test_http_server
 
 # Build rule for target.
@@ -576,6 +589,33 @@ src/http/http11_parser.rl.s: src/http/http11_parser.rl.cc.s
 src/http/http11_parser.rl.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/http/http11_parser.rl.cc.s
 .PHONY : src/http/http11_parser.rl.cc.s
+
+src/http/http_connection.o: src/http/http_connection.cc.o
+
+.PHONY : src/http/http_connection.o
+
+# target to build an object file
+src/http/http_connection.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/http/http_connection.cc.o
+.PHONY : src/http/http_connection.cc.o
+
+src/http/http_connection.i: src/http/http_connection.cc.i
+
+.PHONY : src/http/http_connection.i
+
+# target to preprocess a source file
+src/http/http_connection.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/http/http_connection.cc.i
+.PHONY : src/http/http_connection.cc.i
+
+src/http/http_connection.s: src/http/http_connection.cc.s
+
+.PHONY : src/http/http_connection.s
+
+# target to generate assembly for a file
+src/http/http_connection.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/src/http/http_connection.cc.s
+.PHONY : src/http/http_connection.cc.s
 
 src/http/http_parser.o: src/http/http_parser.cc.o
 
@@ -1171,6 +1211,33 @@ tests/test_http.cc.s:
 	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.s
 .PHONY : tests/test_http.cc.s
 
+tests/test_http_connection.o: tests/test_http_connection.cc.o
+
+.PHONY : tests/test_http_connection.o
+
+# target to build an object file
+tests/test_http_connection.cc.o:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.o
+.PHONY : tests/test_http_connection.cc.o
+
+tests/test_http_connection.i: tests/test_http_connection.cc.i
+
+.PHONY : tests/test_http_connection.i
+
+# target to preprocess a source file
+tests/test_http_connection.cc.i:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.i
+.PHONY : tests/test_http_connection.cc.i
+
+tests/test_http_connection.s: tests/test_http_connection.cc.s
+
+.PHONY : tests/test_http_connection.s
+
+# target to generate assembly for a file
+tests/test_http_connection.cc.s:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.s
+.PHONY : tests/test_http_connection.cc.s
+
 tests/test_http_parser.o: tests/test_http_parser.cc.o
 
 .PHONY : tests/test_http_parser.o
@@ -1394,6 +1461,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_http_connection"
 	@echo "... test_http_server"
 	@echo "... test_socket"
 	@echo "... edit_cache"
@@ -1439,6 +1507,9 @@ help:
 	@echo "... src/http/http11_parser.rl.o"
 	@echo "... src/http/http11_parser.rl.i"
 	@echo "... src/http/http11_parser.rl.s"
+	@echo "... src/http/http_connection.o"
+	@echo "... src/http/http_connection.i"
+	@echo "... src/http/http_connection.s"
 	@echo "... src/http/http_parser.o"
 	@echo "... src/http/http_parser.i"
 	@echo "... src/http/http_parser.s"
@@ -1505,6 +1576,9 @@ help:
 	@echo "... tests/test_http.o"
 	@echo "... tests/test_http.i"
 	@echo "... tests/test_http.s"
+	@echo "... tests/test_http_connection.o"
+	@echo "... tests/test_http_connection.i"
+	@echo "... tests/test_http_connection.s"
 	@echo "... tests/test_http_parser.o"
 	@echo "... tests/test_http_parser.i"
 	@echo "... tests/test_http_parser.s"

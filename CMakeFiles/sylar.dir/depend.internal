@@ -61,6 +61,21 @@ CMakeFiles/sylar.dir/src/http/http11_parser.rl.cc.o
  /home/jucilab/sylar/src/http/http11_common.h
  /home/jucilab/sylar/src/http/http11_parser.h
  /home/jucilab/sylar/src/http/http11_parser.rl.cc
+CMakeFiles/sylar.dir/src/http/http_connection.cc.o
+ /home/jucilab/sylar/src/http/http.h
+ /home/jucilab/sylar/src/http/http11_common.h
+ /home/jucilab/sylar/src/http/http11_parser.h
+ /home/jucilab/sylar/src/http/http_connection.cc
+ /home/jucilab/sylar/src/http/http_connection.h
+ /home/jucilab/sylar/src/http/http_parser.h
+ /home/jucilab/sylar/src/http/httpclient_parser.h
+ src/address.h
+ src/bytearray.h
+ src/endian.h
+ src/noncopyable.h
+ src/socket.h
+ src/stream.h
+ src/streams/socket_stream.h
 CMakeFiles/sylar.dir/src/http/http_parser.cc.o
  /home/jucilab/sylar/src/http/http.h
  /home/jucilab/sylar/src/http/http11_common.h
@@ -119,10 +134,14 @@ CMakeFiles/sylar.dir/src/http/http_session.cc.o
  src/address.h
  src/bytearray.h
  src/endian.h
+ src/log.h
  src/noncopyable.h
+ src/singleton.h
  src/socket.h
  src/stream.h
  src/streams/socket_stream.h
+ src/thread.h
+ src/util.h
 CMakeFiles/sylar.dir/src/http/httpclient_parser.rl.cc.o
  /home/jucilab/sylar/src/http/http11_common.h
  /home/jucilab/sylar/src/http/httpclient_parser.h
@@ -174,8 +193,12 @@ CMakeFiles/sylar.dir/src/socket.cc.o
 CMakeFiles/sylar.dir/src/stream.cc.o
  /home/jucilab/sylar/src/bytearray.h
  /home/jucilab/sylar/src/endian.h
+ /home/jucilab/sylar/src/log.h
+ /home/jucilab/sylar/src/singleton.h
  /home/jucilab/sylar/src/stream.cc
  /home/jucilab/sylar/src/stream.h
+ /home/jucilab/sylar/src/thread.h
+ /home/jucilab/sylar/src/util.h
 CMakeFiles/sylar.dir/src/streams/socket_stream.cc.o
  /home/jucilab/sylar/src/streams/socket_stream.cc
  /home/jucilab/sylar/src/streams/socket_stream.h

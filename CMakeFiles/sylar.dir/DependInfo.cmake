@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jucilab/sylar/src/hook.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/hook.cc.o"
   "/home/jucilab/sylar/src/http/http.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/http/http.cc.o"
   "/home/jucilab/sylar/src/http/http11_parser.rl.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/http/http11_parser.rl.cc.o"
+  "/home/jucilab/sylar/src/http/http_connection.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/http/http_connection.cc.o"
   "/home/jucilab/sylar/src/http/http_parser.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/http/http_parser.cc.o"
   "/home/jucilab/sylar/src/http/http_server.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/http/http_server.cc.o"
   "/home/jucilab/sylar/src/http/http_servlet.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/http/http_servlet.cc.o"
