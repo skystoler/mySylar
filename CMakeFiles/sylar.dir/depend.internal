@@ -234,6 +234,10 @@ CMakeFiles/sylar.dir/src/timer.cc.o
  /home/jucilab/sylar/src/timer.cc
  /home/jucilab/sylar/src/timer.h
  /home/jucilab/sylar/src/util.h
+CMakeFiles/sylar.dir/src/uri.rl.cc.o
+ /home/jucilab/sylar/src/address.h
+ /home/jucilab/sylar/src/uri.h
+ /home/jucilab/sylar/src/uri.rl.cc
 CMakeFiles/sylar.dir/src/util.cc.o
  /home/jucilab/sylar/src/fiber.h
  /home/jucilab/sylar/src/log.h

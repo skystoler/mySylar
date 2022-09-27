@@ -234,6 +234,10 @@ CMakeFiles/sylar.dir/src/timer.cc.o: src/timer.cc
 CMakeFiles/sylar.dir/src/timer.cc.o: src/timer.h
 CMakeFiles/sylar.dir/src/timer.cc.o: src/util.h
 
+CMakeFiles/sylar.dir/src/uri.rl.cc.o: src/address.h
+CMakeFiles/sylar.dir/src/uri.rl.cc.o: src/uri.h
+CMakeFiles/sylar.dir/src/uri.rl.cc.o: src/uri.rl.cc
+
 CMakeFiles/sylar.dir/src/util.cc.o: src/fiber.h
 CMakeFiles/sylar.dir/src/util.cc.o: src/log.h
 CMakeFiles/sylar.dir/src/util.cc.o: src/singleton.h

@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jucilab/sylar/tests/test_uri.cc
+src/uri.h
+/home/jucilab/sylar/tests/src/uri.h
+iostream
+-
+
+src/address.h
+memory
+-
+string
+-
+sys/types.h
+-
+sys/socket.h
+-
+sys/un.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+iostream
+-
+vector
+-
+map
+-
+
+src/uri.h
+memory
+-
+string
+-
+address.h
+src/address.h
+

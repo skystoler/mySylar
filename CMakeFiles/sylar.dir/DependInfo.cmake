@@ -27,6 +27,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jucilab/sylar/src/tcp_server.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/tcp_server.cc.o"
   "/home/jucilab/sylar/src/thread.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/thread.cc.o"
   "/home/jucilab/sylar/src/timer.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/timer.cc.o"
+  "/home/jucilab/sylar/src/uri.rl.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/uri.rl.cc.o"
   "/home/jucilab/sylar/src/util.cc" "/home/jucilab/sylar/CMakeFiles/sylar.dir/src/util.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
