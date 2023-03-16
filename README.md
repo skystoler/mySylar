@@ -76,6 +76,7 @@ A high-performance server framework
     + 调度器无调度任务时会阻塞idle协程上，对IO调度器而言，idle状态应该关注两件事
     + 一是有没有新的调度任务，对应Schduler::schedule()，如果有新的调度任务，那应该立即退出idle状态，并执行对应的任务；
     + 二是关注当前注册的所有IO事件有没有触发，如果有触发，那么应该执行IO事件对应的回调函数
+5. IO事件通过管道注册在epoll中，被epoll监听，没有触发IO事件时idle协程swapin，表现为CPU没有把协程分配到线程上，当触发IO事件时，epoll_wait返回，idle协程swapout，cpu被通知，从协程队列取协程绑定到线程上执行相应任务。
 
 
 ## 定时器
@@ -84,6 +85,7 @@ A high-performance server framework
 
 ## Socket_IO_hook
 1. 将系统函数hook住，改为协程调度模式
+2. 通过dlsym函数拿到对应动态库函数的函数指针，然后重载对应函数，如果不允许hook，就直接返回该指针，否则就使用自己的实现
 
 ## Address+Socket封装
 1. 封装大端，小端
